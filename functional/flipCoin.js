@@ -1,3 +1,20 @@
+
+/******************************************************************************
+*  Execution       :   1. default node         cmd> node flipcoin.js 
+*                      2. if nodemon installed cmd> nodemon flipcoin.js
+* 
+*  Purpose         : Flip Coin and print percentage of Heads and Tails
+
+*  @description    
+* 
+*  @file           : fllipcoin.js
+*  @overview       : Flip Coin and print percentage of Heads and Tails 
+*  @module         : flipcoins - This is optional if expeclictly its an npm or local package
+*  @author         : Tejaswini <chowdarytejaswini2@gmail.com>
+*  @version        : 1.0
+*  @since          : 13-12-2019
+*
+******************************************************************************/
 function FlipCoin(n) {
 	let count = 0, headcount = 0, tailscount = 0;
 	//to check positive integer
