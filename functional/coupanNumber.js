@@ -16,11 +16,11 @@
  ******************************************************************************/
 
 let readline = require("readline-sync");
-let n = readline.question("Enter Number of  Coupon You need :");
-if(isNaN(n)) throw "Not a number";
+let number= readline.question("Enter Number of  Coupon You need :");
+if(isNaN(number)) throw "Not a number";
 let coupanList=new Array();
-coupanList= getGeneratedCoupon(n);
-console.log("The " + n + " Distinct Coupans are:");
+coupanList= getGeneratedCoupon(number);
+console.log("The " +  + " Distinct Coupans are:");
 console.log(coupanList); //prints the coupan numbers
 // Method to generate coupan number and returns to the main method
 function getGeneratedCoupon(n)
@@ -29,7 +29,7 @@ function getGeneratedCoupon(n)
     let flag = true;
     let distinctCoupans=new Array();
     let coupanLength = 5;
-    while (count < n) {
+    while (count < number) {
        let alphaNumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
       let coupan='';
 

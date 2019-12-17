@@ -5,7 +5,7 @@ module.exports = {
     /**
      * To find the year in integer formate.
      * To check weather the given year is leapyear or not.
-     * retur the result.
+     * return the result.
      */
     checkLeapYear=(year) => {
         if ((year % 100 == 0) || (year % 400 == 0) || (year % 4 == 0)) {
@@ -14,7 +14,7 @@ module.exports = {
             return false;
         }
 
-    },
+},
     /**
      * windchill programme 
      */
@@ -26,8 +26,16 @@ module.exports = {
          * return w.
          */
         try {
+            if((t>50)||(v>120 || v<3))
+            {
+                console.log("error");
+            }else{
+
+            
             let W = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * Math.pow(v, 0.16);
+            console.log(w);
             return W;
+            }
         }
         catch (e) {
             console.log(e);
@@ -168,8 +176,10 @@ flipCoin=(n)=>{
 			}
 			count = count + 1;
 		}
-		console.log("Heads flip percentage= " + ((headcount / n) * 100) + "%"); //Print the heads flip percentage
-		console.log("Tails flip percentage= " + ((tailscount / n) * 100) + "%"); //Print the Tails flip percentage
+        console.log("Heads flip percentage= " + ((headcount / n) * 100) + "%"); 
+        //Print the heads flip percentage
+        console.log("Tails flip percentage= " + ((tailscount / n) * 100) + "%"); 
+        //Print the Tails flip percentage
 	}
 	else {
 		console.log("Please Enter positive Integer");
@@ -186,13 +196,13 @@ coupanNumber=(n)=>{
      * total random number needed to have all distinct numbers.
      *print the distinct coupans.
      */
-    while (count < n) {
-        var alphaNumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-        var coupan='';
+    while (count < Number) {
+        let alphaNumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        let coupan='';
 
         for (let i = 0; i < coupanLength; i++)
         {
-            var length = alphaNumeric.length;
+            let length = alphaNumeric.length;
             coupan=coupan+(alphaNumeric.charAt((Math.floor(Math.random()*length)+1))); //each time calling the random function and alphanumeric will appended to the string
             randomCount++; //increment the randomcount for to count how many times random number generated
         }
@@ -244,5 +254,6 @@ stopWatch=()=>{
 
 catch(e){
     console.log(e);
+}
 }
 }
