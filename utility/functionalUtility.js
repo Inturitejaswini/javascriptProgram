@@ -1,24 +1,25 @@
-/**
- * To check leapYear programme 
- */
-module.exports = {
+
     /**
      * To find the year in integer formate.
      * To check weather the given year is leapyear or not.
      * return the result.
      */
-    checkLeapYear=(year) => {
+    exports.checkLeapYear=(year) => {
+        let checkLeapYear;
+        if(year!=4){
+            console.log("enter four digit number");
+        }
         if ((year % 100 == 0) || (year % 400 == 0) || (year % 4 == 0)) {
-            return true;
+            console.log("it is a leapYear");
         } else {
-            return false;
+            console.log("not a leapYear");
         }
 
 },
     /**
      * windchill programme 
      */
-    windChill=(t, v) => {
+    exports.windChill=(t, v) => {
         /**
          * It takes two double command-line arguments t and v and prints the wind chill.
          * the temperature t (in Fahrenheit).
@@ -33,7 +34,6 @@ module.exports = {
 
             
             let W = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * Math.pow(v, 0.16);
-            console.log(w);
             return W;
             }
         }
@@ -44,7 +44,9 @@ module.exports = {
     /**
      *quadratic programme to find the roots of the given equation.
     **/
-    quadratic=(a, b, c) => {
+    exports.quadratic=(a, b, c) => {
+        let root1=0;
+        let root2=0;
         /**
          * a-value of a variable.
          * b-value of b variable.
@@ -53,10 +55,12 @@ module.exports = {
          * return the result.
          */
         try {
-            let delta = math.sqrt((b * b) - (4 * (a * c)));
+            let delta = Math.sqrt((b * b) - (4 * (a * c)));
             let root1 = (-b + Math.sqrt(delta) / (2 * a));
             let root2 = (-b - Math.sqrt(delta) / (2 * a));
             let result = [root1, root2];
+            console.log(root1);
+            console.log(root2);
             return result;
         } catch (e) {
             console.log(e);
@@ -69,7 +73,7 @@ module.exports = {
     * return distance.
     **/
 
-    distance=(x, y) => {
+    exports.distance=(x, y) => {
         /**
          * Find the euclidian distance.
          * distance from (x,y) to (0,0).
@@ -84,7 +88,7 @@ module.exports = {
     /** 
     *Sum of three Integers adds to ZERO.
     **/
-    sumOfThree=(n, arr) => {
+    exports.sumOfThree=(n) => {
         /**
          * Take i,jand k values as inputs using array.
          * sum three integer values adds to zero.
@@ -118,20 +122,20 @@ module.exports = {
     /**
      *Factoria programme number to find the primefactor.
      */
-    factorial=(n) => {
+    exports.factorial=(N) => {
         /**
          * Traverse till i*i <= N instead of i <= N for efficiency.
          *  Print the prime factors of number N.
          */
         try {
-            for (let factorial = 2; factorial * factorial <= n; factorial++) {
-                while (n % factorial == 0) {
+            for (let factorial = 2; factorial * factorial <= N; factorial++) {
+                while (N % factorial == 0) {
                     console.log(factorial + " ");
-                    n = n / factorial;
+                    N = N / factorial;
                 }
             }
-            if (n > 1)
-                console.log(n);
+            if (N > 1)
+                console.log(N);
             else
                 console.log();
         }
@@ -145,7 +149,7 @@ module.exports = {
  * powerOfTwo programme This program takes a command-line argument N 
  * and prints a table of the powers of 2 that are less than or equal to 2^N.
  */
-powerOfTwo=(n)=>{
+exports.powerOfTwo=(n)=>{
     /**
      * The Power Value N. 
      * repeat until i equals N.
@@ -155,18 +159,23 @@ powerOfTwo=(n)=>{
     let i=0;
     let powerOfTwo=1;
     while(i<=n){
-        powerOfTwo=powerOfTwos*2;
+        powerOfTwo=powerOfTwo*2;
         i=i+1;
     }
 },
 /**
- * flipcoin programme BL
+ * flipcoin programme 
  */
-flipCoin=(n)=>{
+exports.flipCoin=(N)=>{
+    /**
+     * count the heads and tails
+     * Find the  Percentage of Head vs Tails
+     * finlly count the result.
+     */
     let count = 0, headcount = 0, tailscount = 0;
 	//to check positive integer
-	if (n > 0) {
-		while (count < n) {
+	if (N > 0) {
+		while (count <N) {
 			//Each time different random number generated between 1 and 0
 			if (Math.random() < 0.5) {
 				headcount = headcount + 1; //heads count incremented
@@ -176,9 +185,9 @@ flipCoin=(n)=>{
 			}
 			count = count + 1;
 		}
-        console.log("Heads flip percentage= " + ((headcount / n) * 100) + "%"); 
+        console.log("Head flip percentage= " + ((headcount / N) * 100) + "%"); 
         //Print the heads flip percentage
-        console.log("Tails flip percentage= " + ((tailscount / n) * 100) + "%"); 
+        console.log("Tails flip percentage= " + ((tailscount / N) * 100) + "%"); 
         //Print the Tails flip percentage
 	}
 	else {
@@ -189,8 +198,12 @@ flipCoin=(n)=>{
  * coupan number programme 
  * Genrate distinct Coupon numbers.
  */
-coupanNumber=(n)=>{
+exports.coupanNumber=(n)=>{
+    let count=0;
+    let randomCount=0;
+    let distinctCoupans=0;
     /**
+     * 
      * N Distinct Coupon Number.
      * repeatedly choose a random number and check whether it's a new one.
      * total random number needed to have all distinct numbers.
@@ -199,7 +212,6 @@ coupanNumber=(n)=>{
     while (count < Number) {
         let alphaNumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         let coupan='';
-
         for (let i = 0; i < coupanLength; i++)
         {
             let length = alphaNumeric.length;
@@ -222,38 +234,17 @@ coupanNumber=(n)=>{
     console.log("Total Random number needed to have all distinct coupan number: " + randomCount); //prints the total number random used
     return distinctCoupans;
 },
-
 /**
- * stopwatch programme.
- * Simulate Stopwatch Program.
+ * to print nth harmonic value
  */
-stopWatch=()=>{
+exports.har=(n)=>{
     /**
-     * Start the Stopwatch and End the Stopwatch.
-     * Measure the elapsed time between start and end.
-     * Print the elapsed time.
-
+     * harmonic value n
+     * print the nth haronic value
      */
-    try{
-    function start() {
-        let d=new Date();
-        startTimer = d.getMilliseconds();
-        console.log("Start Time is: " + (startTimer));
+    let h=1;
+    for(let i=2;i<=n;i++){
+        h=h+1/i;
     }
-    function stop() {
-        let d=new Date();
-        stopTimer = d.getMilliseconds();
-        console.log("Stop Time is: " + (stopTimer));
-    }
-    
-    function getElapsedTime() {
-        elapsed = Math.abs(Number(stopTimer) - Number(startTimer));
-        return elapsed;
-    }
-}
-
-catch(e){
-    console.log(e);
-}
-}
+    return h;
 }

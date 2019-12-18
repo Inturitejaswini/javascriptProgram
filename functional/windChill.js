@@ -15,7 +15,8 @@
  *
  ******************************************************************************/
 let readline = require("readline-sync");
-let util=require('../utility/Functionalutility')
-const t = readline.question("enter t value:");
-const v = readline.question("enter v value:");
+let util=require('../utility/functionalUtility')
+let t = readline.question("enter t value:");
+let v = readline.question("enter v value:");
 let result=util.windChill(t,v);
+console.log(result);

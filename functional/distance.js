@@ -15,8 +15,9 @@
  ******************************************************************************/
 //to make user interact with script code via console
 
-const readline=require("readline-sync");
-const x=readline.question("enter the x value:");
-const y=readline.question("enter the y value:");
-let distance=Math.sqrt(x*x+y*y);
-console.log("distance from("+x+","+y+") to (0,0)="+distance);
+let readline=require("readline-sync");
+let x=readline.question("enter the x value:");
+let y=readline.question("enter the y value:");
+let util=require('../utility/functionalUtility');
+let result=util.distance(x,y);
+console.log("distance is ",result);

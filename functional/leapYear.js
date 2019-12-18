@@ -14,20 +14,9 @@
  *  @since          : 13-12-2019
  *
  ******************************************************************************/
-function CheckLeapYear(year){
-    if (year.length != 4 || isNaN(year)) {
-        console.log("Please enter 4 digit Year");
-    }
-    else {
-        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) 
-        {
-            console.log("Year " + year + " is a Leap Year"); 
-        }
-        else {
-            console.log("Year " + year + " is not a Leap Year"); 
-        }
-    }
-}
-const readline = require("readline-sync");
-const year = readline.question("Enter any year:");
-CheckLeapYear(year);
+let readline = require("readline-sync");
+let year = readline.question("Enter any year:");
+let util=require('../utility/functionalUtility');
+let result=util.checkLeapYear(year);
+console.log("year is ",result);
+
