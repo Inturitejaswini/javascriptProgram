@@ -115,9 +115,16 @@ exports.insertionSort=(arr)=>{
     return arr;
 },
 /**
- * 
+ * mergesort to sort the word list in sorted order.
  */
 exports.mergeSort = (arr, low,high)=> {
+    /**
+     * a program to do Merge Sort of list of Strings.
+     * To Merge Sort an array, we divide it into two halves, 
+     * sort the two halves independently, and then merge the results
+     *  to sort the full array. To sort a[lo, hi), we use the following recursive
+     *  strategy.
+     */
     if (low < high) {
         // Find the middle point 
         let mid = parseInt((low + high) / 2);
