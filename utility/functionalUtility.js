@@ -88,7 +88,7 @@
     /** 
     *Sum of three Integers adds to ZERO.
     **/
-    exports.sumOfThree=(n) => {
+    exports.sumOfThree=(arr,n) => {
         /**
          * Take i,jand k values as inputs using array.
          * sum three integer values adds to zero.

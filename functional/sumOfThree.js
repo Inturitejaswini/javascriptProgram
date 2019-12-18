@@ -19,4 +19,4 @@ let readLine = require('readline-sync');
 let  n = readLine.question("enter the number of elements");
 console.log("enter the elements");
 let util=require('../utility/functionalUtility');
-let result=util.sumOfThree(n);
+let result=util.sumOfThree(arr,n);

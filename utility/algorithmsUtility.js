@@ -95,11 +95,15 @@ exports.bubbleSort=(arr)=> {
     return (items[middle] != value) ? -1 : middle;
 },
 /**
- * 
+ * Reads in strings and prints them in sorted order using insertion sort.
  */
 exports.insertionSort=(arr)=>{
-     let len=arr.len;
-    for (let i = 1; i <len; i++) {
+    /**
+     * read in the list words
+     * Use Insertion Sort to sort the words in the String array
+     * Print the Sorted List.
+     */
+    for (let i = 1; i <arr.length; i++) {
         let key = arr[i];
         let j = i - 1;
         while (j >-1 && arr[j] > key) {
@@ -109,4 +113,69 @@ exports.insertionSort=(arr)=>{
         arr[j+1] = key;
     }
     return arr;
+},
+/**
+ * 
+ */
+exports.mergeSort = (arr, low,high)=> {
+    if (low < high) {
+        // Find the middle point 
+        let mid = parseInt((low + high) / 2);
+
+        // Sort first and second halves 
+        mergeSort(arr, low, mid);
+        mergeSort(arr, mid + 1, high); 
+        // Merge the sorted halves 
+        merge(arr, low, mid, high);
+    }
+    return arr;
+}
+function merge(arr, low, mid, high) {
+    // Find sizes of two subarrays to be merged 
+    let array1 = mid - low + 1;
+    let array2= high - mid;
+
+    /* Create temporary arrays */
+    let leftArray = new Array(array1);
+    let rightArray = new Array(array2);
+
+    /*Copy data to temporary arrays*/
+    for (let i = 0; i < array1; ++i)
+        leftArray[i] = arr[low + i];
+    for (let j = 0; j < array2; ++j)
+        rightArray[j] = arr[mid + 1 + j];
+
+
+    /* Merge the temp arrays */
+
+    // Initial indexes of first and second subarrays 
+    let i = 0, j = 0;
+
+    // Initial index of merged subarry array 
+    let k = low;
+    while (i < array1 && j <array2) {
+        if (leftArray[i].localeCompare(rightArray[j]) <= 0) {
+            arr[k] = leftArray[i];
+            i++;
+        }
+        else {
+            arr[k] = rightArray[j];
+            j++;
+        }
+        k++;
+    }
+
+    /* Copy remaining elements of L[] if any */
+    while (i < array1) {
+        arr[k] = leftArray[i];
+        i++;
+        k++;
+    }
+
+    /* Copy remaining elements of R[] if any */
+    while (j < array2) {
+        arr[k] = rightArray[j];
+        j++;
+        k++;
+    }
 }
