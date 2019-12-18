@@ -16,25 +16,14 @@
  *  @since          : 13-12-2019
  *
  ******************************************************************************/
-
-
-let readline = require("readline-sync");
-const fs = require("fs"); //built in library for read file
-try {
-    let stringArray = fs.readFileSync("../StringList.txt").toString().split(" "); //read the file and split it to array
-    console.log("StringList.txt file string list");
-    console.log(stringArray);
-    //get word to search
-    let searchWord = readline.question("enter word to search:");
-    //call binary search function() and assign result
-    binarySearch(stringArray, searchWord);
+ let readline = require("readline-sync");
+ let util=require('../utility/algorithmsUtility');
+ let value = readline.question("enter word to search:");
+ let items=["ttt","hsf","tyru","uytre"];
+ let result = util.binarySearch(items,value);
     if (result == -1) {
-        console.log(searchWord + " is not present");
+        console.log(value+ " is not present");
     }
     else {
-        console.log(searchWord + " is present at index " + result);
+        console.log(value + " is present at index " + result);
     }
-}
-catch (error) {
-    console.log(error);
-}

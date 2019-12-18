@@ -14,14 +14,9 @@
  *  @since          : 13-12-2019
  *
  ******************************************************************************/
-let readline = require("readline-sync");
-try {
+    let readline = require("readline-sync");
     let util = require('../utility/algorithmsUtility')
     //take one inout of strings
     let string = readline.question("enter one string:");
     let results = util.getAllPermutations(string);
     console.log(results);
-}
-catch (error) {
-    console.log(error);
-}

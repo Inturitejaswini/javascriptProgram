@@ -100,9 +100,9 @@
              * Find sum of three intergers to zero.
              * arr[i] + arr[j] + arr[k] == 0.
              */
-            for (i = 0; i < n.length; i++) {
-                for (j = i + 1; j < n.length - 1; j++) {
-                    for (k = i + 2; k < n.length - 2; k++) {
+            for (i = 0; i < n; i++) {
+                for (j = i + 1; j < n- 1; j++) {
+                    for (k = i + 2; k < n- 2; k++) {
                         if (arr[i] + arr[j] + arr[k] == 0) {
                             count++;
                             console.log("triplet : " + arr[i] + " + " + arr[j] + " + " + arr[k]);
