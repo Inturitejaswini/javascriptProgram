@@ -1,3 +1,24 @@
+
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node message.js 
+ *                      2. if nodemon installed cmd> nodemon message.js
+ *                  
+ * 
+ *  Purpose         : . takes a command-line argument N, asks you to think of a number
+ *        between 0 and N-1, where N = 2^n, and always guesses the answer with n questions.
+
+*  @description    
+ * 
+ *  @file           : message.js
+ *  @overview       : Use Binary Search to find the number
+
+ *  @module         : message- This is optional if expeclictly its an npm or local package
+ *  @author         : Tejaswini <chowdarytejaswini2@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 13-12-2019
+ *
+ ******************************************************************************/
+
 let readline = require("readline-sync");
 let util=require('../utility/algorithmsUtility');
 let firstName, lastName, fullName, contactNumber, date;

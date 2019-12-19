@@ -169,10 +169,15 @@ function merge(arr, low, mid, high) {
         k++;
     }}
 /**
- * 
+ *anagrame programebl
  */
 exports.isAnagram=(string1,string2)=>
 {
+    /**
+     * One string is an anagram of another if the second is simply a 
+     * rearrangement of the first.
+     * The Two Strings are Anagram or not.
+     */
     if(string1.length!=string2.length){
         return false;
     }
@@ -188,9 +193,12 @@ exports.isAnagram=(string1,string2)=>
     }
 },
 /**
- * 
+ *to find the prime number betwwen the range.
  */
 exports.isPrimeRange=(n)=>{
+    /**
+     * Take a range of 0 - 1000 Numbers and find the Prime numbers in that range. 
+     */
     if(n<2){
         return false;
     }
@@ -209,9 +217,15 @@ exports.isPrimeRange=(n)=>{
     
 },
 /**
- * 
+ * number to find questionbl
  */
 exports.getDetails=(message,firstName, lastName, fullName, contactNumber, date)=>{
+    /**
+     *  the Number N and then recursively ask true/false if the number
+     *  is between a high and low .
+     * Use Binary Search to find the number.
+
+     */
         message=message.replace("<<name>>", firstName);
         message=message.replace("<<full name>>", fullName);
         message=message.replace("XXXXXXXXXX", contactNumber);
