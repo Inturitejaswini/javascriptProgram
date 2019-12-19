@@ -127,7 +127,7 @@ exports.mergeSort = (arr, low,high)=> {
      */
     if (low < high) {
         // Find the middle point 
-        let mid = parseInt((low + high) / 2);
+        let mid = (low + high) / 2;
 
         // Sort first and second halves 
         mergeSort(arr, low, mid);
@@ -184,5 +184,48 @@ function merge(arr, low, mid, high) {
         arr[k] = rightArray[j];
         j++;
         k++;
+    }}
+/**
+ * 
+ */
+exports.isAnagram=(string1,string2)=>
+{
+    if(string1.length!=string2.length){
+        return false;
     }
+    else
+    {
+    let stringArray1=string1.toLowerCase().split('');
+    let stringArray2=string2.toLowerCase().split('');
+    if(stringArray1.sort().join('').localeCompare(stringArray2.sort().join('')==0)){
+        return true;
+    }else{
+        return false;
+    }
+    }
+},
+/**
+ * 
+ */
+exports.isPrimeRange=(n)=>{
+    if(n<2){
+        return false;
+    }
+    for(let i=2;i<=n/2;i++){
+        if(n%i==0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+    for(let i=0;i<=1000;i++){
+        if(this.isPrimeRange(i))
+        console.log(i);
+
+    }
+    
 }
+/**
+ * 
+ */
+
