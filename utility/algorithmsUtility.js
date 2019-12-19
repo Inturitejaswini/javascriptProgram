@@ -1,43 +1,26 @@
-
+exports.getAllPermutations=(string)=>{
     /**
-     * the arrays returned by two string functions are equal.
-     * a String using iterative method and Recursion method. 
+     * Recursive function to generate all permutations of a String. 
+     * Check if the arrays returned by two string functions are equal.
      */
-    exports.getAllPermutations = (string) => {
-        /**
-         * Finally find the all permutations of given string.
-         * return the result of all permutations.
-         */
-        let results = [];
-        if (string.length ==1) {
-            results.push(string);
-             console.log(' String in if '+string);
-            console.log('Result in if '+results);
-            return results;
-        }
-    
-        for (let i = 0; i < string.length; i++) {
-              console.log("i is "+i);
-            let firstChar = string[i];
-             console.log("first char "+firstChar);
-            let charsLeft = string.substring(0, i) + string.substring(i + 1);
-             console.log("chars left "+charsLeft);
-            let innerPermutations = getAllPermutations(charsLeft);
-            console.log("inner  "+innerPermutations);
-            for (let j = 0; j < innerPermutations.length; j++) {
-                console.log(" j "+j);
-                results.push(firstChar + innerPermutations[j]);
-                 console.log('result for '+results);
-    
-            }
-        }
-        return results;
-    },
-    
+    let results = [];
+    if (string.length ==1) {
+        return string;
+    }
 
-    
+    for (let i = 0; i < string.length; i++) {
+        
+        let first= string[i];
+        let charsRemaining = string.substring(0, i) + string.substring(i + 1);
+        let remainingPerms = getAllPermutations(charsRemaining);
+        for (let j = 0; j < remainingPerms.length; j++) {
+        results.push(first +remainingPerms[j]);
 
-/**
+        }
+    }
+    return results;
+ }
+ /**
  * bubble sort programme to sort elementsin the given array.
  */
 
@@ -224,8 +207,15 @@ exports.isPrimeRange=(n)=>{
 
     }
     
-}
+},
 /**
  * 
  */
+exports.getDetails=(message,firstName, lastName, fullName, contactNumber, date)=>{
+        message=message.replace("<<name>>", firstName);
+        message=message.replace("<<full name>>", fullName);
+        message=message.replace("XXXXXXXXXX", contactNumber);
+        message=message.replace("01/01/2016", date);
+        console.log(message);
+}
 

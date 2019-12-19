@@ -15,8 +15,25 @@
  *
  ******************************************************************************/
     let readline = require("readline-sync");
-    let util = require('../utility/algorithmsUtility')
+   let util = require('../utility/algorithmsUtility')
     //take one inout of strings
     let string = readline.question("enter one string:");
-    let results = util.getAllPermutations(string);
-    console.log(results);
+    function getAllPermutations(string){
+      let results = [];
+      if (string.length ==1) {
+          return string;
+      }
+  
+      for (let i = 0; i < string.length; i++) {
+          
+          let first= string[i];
+          let charsRemaining = string.substring(0, i) + string.substring(i + 1);
+          let remainingPerms = getAllPermutations(charsRemaining);
+          for (let j = 0; j < remainingPerms.length; j++) {
+          results.push(first +remainingPerms[j]);
+  
+          }
+      }
+      return results;
+   }
+    console.log(getAllPermutations('abc'));

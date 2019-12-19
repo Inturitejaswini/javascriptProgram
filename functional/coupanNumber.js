@@ -17,7 +17,7 @@
 
 let readline = require("readline-sync");
 let util=require('../utility/functionalUtility');
-let number= readline.question("Enter Number of  Coupon You need :")
+let number= readline.question("Enter lNumber of  Coupon You need :")
 console.log("The " +  + " Distinct Coupans are:");
 let result=util.coupanNumber(number);
 console.log("coupanNumber is ",result);
