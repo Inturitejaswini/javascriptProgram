@@ -15,7 +15,7 @@
  *  @module         : message- This is optional if expeclictly its an npm or local package
  *  @author         : Tejaswini <chowdarytejaswini2@gmail.com>
  *  @version        : 1.0
- *  @since          : 13-12-2019
+ *  @since          : 19-12-2019
  *
  ******************************************************************************/
 
@@ -29,6 +29,5 @@ let message = "Hello <<name>>, We have your full name as <<full name>> in our sy
     lastName = readline.question("Enter Your Last Name : ")
     fullName = firstName + ' ' + lastName;
     contactNumber = readline.question("Enter contact number : ")
-    //if(isNaN(contactNumber)) throw "Enters valid mobile no.";
     date = readline.question("Enter date in dd/mm/yyyy format: ")
 util.getDetails(message,firstName, lastName, fullName, contactNumber, date);

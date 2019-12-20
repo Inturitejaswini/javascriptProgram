@@ -12,7 +12,7 @@
 *  @module         : flipcoins - This is optional if expeclictly its an npm or local package
 *  @author         : Tejaswini <chowdarytejaswini2@gmail.com>
 *  @version        : 1.0
-*  @since          : 13-12-2019
+*  @since          : 15-12-2019
 *
 ******************************************************************************/
 let readline = require("readline-sync");

@@ -219,7 +219,7 @@ exports.isPrimeRange=(n)=>{
 /**
  * number to find questionbl
  */
-exports.getDetails=(message,firstName, lastName, fullName, contactNumber, date)=>{
+exports.getDetails=(message,firstName,lastName, fullName, contactNumber, date)=>{
     /**
      *  the Number N and then recursively ask true/false if the number
      *  is between a high and low .
@@ -227,6 +227,7 @@ exports.getDetails=(message,firstName, lastName, fullName, contactNumber, date)=
 
      */
         message=message.replace("<<name>>", firstName);
+        message=message.replace("<<name>>", lastName);
         message=message.replace("<<full name>>", fullName);
         message=message.replace("XXXXXXXXXX", contactNumber);
         message=message.replace("01/01/2016", date);

@@ -11,10 +11,10 @@
  *  @file           : permutations.js
  *  @overview       : Check if the arrays returned by two string functions are equal. 
  *  @version        : 1.0
- *  @since          : 13-12-2019
+ *  @since          : 19-12-2019
  *
  ******************************************************************************/
-    let readline = require("readline-sync");
+   let readline = require("readline-sync");
    let util = require('../utility/algorithmsUtility')
     //take one inout of strings
     let string = readline.question("enter one string:");
