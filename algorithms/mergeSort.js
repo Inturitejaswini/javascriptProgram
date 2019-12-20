@@ -19,7 +19,7 @@
     let util = require('../utility/algorithmsUtility');
    try{
     console.log("Before Sorting String Array:",arr)
-    let arr=[];
+    let arr=new Array(length);
    let number=readline.question("enter no of words ");
    let i=0;
    while(i!=number){

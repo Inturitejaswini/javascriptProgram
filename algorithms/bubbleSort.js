@@ -19,15 +19,15 @@
 let readline = require("readline-sync");
 let util=require("../utility/algorithmsUtility");
 try{
-console.log("before sorting array is:"+"["+arr+"]");
-let arr=[];
- let number=read.question("enter no of words ");
+ let number=readline.question("enter no of words ");
+ let arr=new Array(length);
  let i=0;
  while(i!=number){
-     arr[i]=read.question();
+     arr[i]=readline.question();
      i++;
  }
-let sortedArray=util.bubbleSort(arr);
+ console.log("before sorting array is:"+"["+arr+"]");
+ let sortedArray=util.bubbleSort(arr);
 console.log("after sorting array is:"+"["+sortedArray+"]");
  }catch(e){
     console.log(e)
