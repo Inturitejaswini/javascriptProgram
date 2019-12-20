@@ -1,8 +1,10 @@
-exports.getAllPermutations=(string)=>{
+
     /**
      * Recursive function to generate all permutations of a String. 
      * Check if the arrays returned by two string functions are equal.
      */
+exports.getAllPermutations=(string)=>{
+
     let results = [];
     if (string.length ==1) {
         return string;
@@ -20,16 +22,13 @@ exports.getAllPermutations=(string)=>{
     }
     return results;
  }
- /**
- * bubble sort programme to sort elementsin the given array.
- */
-
-exports.bubbleSort=(arr)=> {
-    /**
+/**
      *  Reads in integers prints them in sorted order using Bubble Sort
      *  read in the list ints.
      * print the elements in sorted list using this bubble Sort.
      */
+exports.bubbleSort=(arr)=> {
+
     for (i = 0; i < arr.length-1; i++)  
     { 
         for (j = 0; j < arr.length-1-i;j++)  
@@ -44,18 +43,15 @@ exports.bubbleSort=(arr)=> {
         } 
     }return arr;
 },
-
- /**
-  * binarysearch to find word from a wordlist
-  *  */   
- exports.binarySearch=(items, value)=>
- {
- /**
+/**
   * read in the list words comma separated from a File and 
   * then enter the word to be searched.
   * Use Arrays to sort the word list and then do the binary search
   * Print the result if the word is found or not.
   */
+ 
+ exports.binarySearch=(arr,items, value)=>
+ {
 
     let startIndex  = 0,
         stopIndex   = items.length - 1,
@@ -78,14 +74,12 @@ exports.bubbleSort=(arr)=> {
     return (items[middle] != value) ? -1 : middle;
 },
 /**
- * Reads in strings and prints them in sorted order using insertion sort.
- */
-exports.insertionSort=(arr)=>{
-    /**
      * read in the list words
      * Use Insertion Sort to sort the words in the String array
      * Print the Sorted List.
      */
+exports.insertionSort=(arr)=>{
+    
     for (let i = 1; i <arr.length; i++) {
         let key = arr[i];
         let j = i - 1;
@@ -98,16 +92,14 @@ exports.insertionSort=(arr)=>{
     return arr;
 },
 /**
- * mergesort to sort the word list in sorted order.
- */
-exports.mergeSort = (arr, low,high)=> {
-    /**
      * a program to do Merge Sort of list of Strings.
      * To Merge Sort an array, we divide it into two halves, 
      * sort the two halves independently, and then merge the results
      *  to sort the full array. To sort a[lo, hi), we use the following recursive
      *  strategy.
      */
+exports.mergeSort = (arr, low,high)=> {
+    
     if (low < high) {
         // Find the middle point 
         let mid = (low + high) / 2;
@@ -168,16 +160,14 @@ function merge(arr, low, mid, high) {
         j++;
         k++;
     }}
-/**
- *anagrame programebl
- */
-exports.isAnagram=(string1,string2)=>
-{
-    /**
+ /**
      * One string is an anagram of another if the second is simply a 
      * rearrangement of the first.
      * The Two Strings are Anagram or not.
      */
+exports.isAnagram=(string1,string2)=>
+{
+   
     if(string1.length!=string2.length){
         return false;
     }
@@ -193,17 +183,15 @@ exports.isAnagram=(string1,string2)=>
     }
 },
 /**
- *to find the prime number betwwen the range.
- */
-exports.isPrimeRange=(n)=>{
-    /**
      * Take a range of 0 - 1000 Numbers and find the Prime numbers in that range. 
      */
-    if(n<2){
+exports.isPrimeRange=(number)=>{
+    
+    if(number<2){
         return false;
     }
-    for(let i=2;i<=n/2;i++){
-        if(n%i==0){
+    for(let i=2;i<=number/2;i++){
+        if(number%i==0){
             return false;
         }else{
             return true;
@@ -216,16 +204,14 @@ exports.isPrimeRange=(n)=>{
     }
     
 },
-/**
- * number to find questionbl
- */
-exports.getDetails=(message,firstName,lastName, fullName, contactNumber, date)=>{
     /**
      *  the Number N and then recursively ask true/false if the number
      *  is between a high and low .
      * Use Binary Search to find the number.
 
      */
+exports.getDetails=(message,firstName,lastName, fullName, contactNumber, date)=>{
+
         message=message.replace("<<name>>", firstName);
         message=message.replace("<<name>>", lastName);
         message=message.replace("<<full name>>", fullName);

@@ -15,7 +15,11 @@
  ******************************************************************************/
 
 let readline=require('readline-sync');
-let n=readline.question("enter the value:");
 let util=require("../utility/functionalUtility");
-let result=util.har(n);
+try{
+let number=readline.question("enter the value:");
+let result=util.har(number);
 console.log("nth harmonic value",result);
+}catch(e){
+    console.lo(e);
+}

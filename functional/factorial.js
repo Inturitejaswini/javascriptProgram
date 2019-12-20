@@ -15,9 +15,13 @@
  *  @since          : 15-12-2019
  *
  ******************************************************************************/
-const readLine= require('readline-sync');
-let  N = readLine.question("enter any integer "); // asking user to enter the number  
+let readLine= require('readline-sync');
 let util=require('../utility/functionalUtility');
-let result=util.factorial(N);
+try{
+let number= readLine.question("enter any integer ");
+let result=util.factorial(number);
 console.log("factorial value is ",result);
+}catch(e){
+    console.log(e);
+}
 

@@ -17,6 +17,10 @@
 ******************************************************************************/
 let readline = require("readline-sync");
 let util=require('../utility/functionalUtility');
-let N = readline.question("Enter number of Times to Flip the coin:");
-let result=util.flipCoin(N);
+try{
+let number= readline.question("Enter number of Times to Flip the coin:");
+let result=util.flipCoin(number);
 console.log("flipCoin is ",result);
+}catch{
+    console.log(e);
+}

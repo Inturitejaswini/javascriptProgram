@@ -16,8 +16,12 @@
 //to make user interact with script code via console
 
 let readline=require("readline-sync");
+let util=require('../utility/functionalUtility');
+try{
 let x=readline.question("enter the x value:");
 let y=readline.question("enter the y value:");
-let util=require('../utility/functionalUtility');
 let result=util.distance(x,y);
 console.log("distance is ",result);
+}catch(e){
+    console.log(e);
+}

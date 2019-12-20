@@ -18,7 +18,12 @@
  *
  ******************************************************************************/
 let readline=require("readline-sync");
-let n=readline.question("enter n number");
 let util=require('../utility/functionalUtility');
-let result=util.powerOfTwo(n);
+try{
+let number=readline.question("enter n number");
+let result=util.powerOfTwo(number);
 console.log("powerOfTwo is ",result);
+}
+catch{
+    console.log(e);
+}

@@ -15,10 +15,20 @@
  *
  ******************************************************************************/
 let readline=require('readline-sync');
-let arr=["gdf","hdg","fd","jhgd","gsf"];
-console.log("before sorting array is:",arr);
 let util = require("../utility/algorithmsUtility");
+try{
+console.log("before sorting array is:",arr);
+let arr=[];
+ let number=readline.question("enter no of words ");
+ let i=0;
+ while(i!=number){
+     arr[i]=readline.question();
+     i++;
+ }
 let result=util.insertionSort(arr);
 console.log("after sorting array is :",result);
-    
+}
+catch{
+    console.log(e);
+} 
     

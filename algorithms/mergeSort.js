@@ -17,8 +17,18 @@
  ******************************************************************************/
     let readline = require("readline-sync");
     let util = require('../utility/algorithmsUtility');
-    let arr=["gdf","hdg","fd","jhgd","gsf"];
+   try{
     console.log("Before Sorting String Array:",arr)
+    let arr=[];
+   let number=readline.question("enter no of words ");
+   let i=0;
+   while(i!=number){
+     arr[i]=readline.question();
+     i++;
+   }
     let result= util.mergeSort(arr, 0, arr.length - 1);
     console.log("After Sorting String Array:",result);
-   
+   }
+   catch(e){
+consolelog(e);
+   }

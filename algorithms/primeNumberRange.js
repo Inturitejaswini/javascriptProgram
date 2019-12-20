@@ -17,12 +17,17 @@
  ******************************************************************************/
 let readline = require("readline-sync");
 let util=require('../utility/algorithmsUtility');
-let n= readline.question("Enter a number :")
-let result=util.isPrimeRange(n);
+try{
+let number= readline.question("Enter a number :")
+let result=util.isPrimeRange(number);
 console.log("the number is ",result);
-if(result==true){
+if(result===true){
     console.log("it is a prime");
 }else{
     console.log("not a prime");
+}
+}
+catch(e){
+    console.log(e);
 }
 

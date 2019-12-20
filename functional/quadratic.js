@@ -15,10 +15,14 @@
  *
  ******************************************************************************/
 let readline = require("readline-sync");
+let util=require('../utility/functionalUtility');
+try{
 let a = readline.question("enter a value");
 let b = readline.question("enter b value");
 let c = readline.question("enter c value");
-let util=require('../utility/functionalUtility');
 let result=util.quadratic(a,b,c);
 console.log("print values  ",result);
+}catch(e){
+    console.log(e);
+}
 

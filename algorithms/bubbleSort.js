@@ -15,9 +15,20 @@
  *  @since          : 17-12-2019
  *
  ******************************************************************************/
-    let arr=[3,5,2,8,6,9,7,53,21];
-    console.log("before sorting array is:"+"["+arr+"]");
-    let util=require("../utility/algorithmsUtility");
-    let sortedArray=util.bubbleSort(arr);
-    console.log("after sorting array is:"+"["+arr+"]");
-    
+
+let readline = require("readline-sync");
+let util=require("../utility/algorithmsUtility");
+try{
+console.log("before sorting array is:"+"["+arr+"]");
+let arr=[];
+ let number=read.question("enter no of words ");
+ let i=0;
+ while(i!=number){
+     arr[i]=read.question();
+     i++;
+ }
+let sortedArray=util.bubbleSort(arr);
+console.log("after sorting array is:"+"["+sortedArray+"]");
+ }catch(e){
+    console.log(e)
+ }

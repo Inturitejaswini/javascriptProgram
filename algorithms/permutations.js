@@ -20,7 +20,7 @@
     let string = readline.question("enter one string:");
     function getAllPermutations(string){
       let results = [];
-      if (string.length ==1) {
+      if (string.length ===1) {
           return string;
       }
   

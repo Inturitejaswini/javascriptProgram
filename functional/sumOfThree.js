@@ -16,7 +16,22 @@
  *
  ******************************************************************************/
 let readLine = require('readline-sync');
-let  n = readLine.question("enter the number of elements");
-console.log("enter the elements");
 let util=require('../utility/functionalUtility');
-let result=util.sumOfThree(arr,n);
+try{
+let  number = readLine.question("enter the number of elements");
+let arr=new Array();
+i=0;
+while(i!=number){
+    arr[i]=read.questionInt();
+    i++
+}
+if(result===0){
+    console.log("sum is zer");
+}else{
+    console.log("sum is not zero");
+}
+let result=util.sumOfThree(arr,number);
+console.log("sumOfThree is",result);
+}catch(e){
+    console.log(e);
+}

@@ -16,7 +16,12 @@
  ******************************************************************************/
 let readline = require("readline-sync");
 let util=require('../utility/functionalUtility')
+try{
 let t = readline.question("enter t value:");
 let v = readline.question("enter v value:");
 let result=util.windChill(t,v);
 console.log(result);
+}
+catch(e){
+  console.log(e);
+}

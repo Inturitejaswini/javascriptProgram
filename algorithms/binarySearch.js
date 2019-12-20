@@ -18,12 +18,16 @@
  ******************************************************************************/
  let readline = require("readline-sync");
  let util=require('../utility/algorithmsUtility');
+ try{
  let value = readline.question("enter word to search:");
- let items=["ttt","hsf","tyru","uytre"];
- let result = util.binarySearch(items,value);
-    if (result == -1) {
-        console.log(value+ " is not present");
-    }
-    else {
-        console.log(value + " is present at index " + result);
-    }
+ let arr=[];
+ let i=0;
+ while(i!=value){
+     arr[i]=readline.question();
+     i++;
+ }
+ let result = util.binarySearch(arr,items,value);
+ console.log("the word is",result);
+}catch(e){
+    console.log(e);
+}
