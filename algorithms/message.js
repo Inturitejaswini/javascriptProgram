@@ -21,6 +21,7 @@
 
 let readline = require("readline-sync");
 let util=require('../utility/algorithmsUtility');
+try{
 let firstName, lastName, fullName, contactNumber, date;
 let message = "Hello <<name>>, We have your full name as <<full name>> in our system."
     + "Your contact number is 91-XXXXXXXXXX. Please, let us know in case of any clarification."
@@ -31,3 +32,7 @@ let message = "Hello <<name>>, We have your full name as <<full name>> in our sy
     contactNumber = readline.question("Enter contact number : ")
     date = readline.question("Enter date in dd/mm/yyyy format: ")
 util.getDetails(message,firstName, lastName, fullName, contactNumber, date);
+}
+catch(e){
+    console.log(e);
+}
