@@ -18,9 +18,9 @@ let readline=require('readline-sync');
 let util = require("../utility/algorithmsUtility");
 try{
 console.log("before sorting array is:",arr);
-let arr=new Array(length);
- let number=readline.question("enter no of words ");
- let i=0;
+let number=readline.question("enter no of words ");
+let arr=new Array(number);
+let i=0;
  while(i!=number){
      arr[i]=readline.question();
      i++;

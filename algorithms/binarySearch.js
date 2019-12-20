@@ -20,7 +20,7 @@
  let util=require('../utility/algorithmsUtility');
  try{
  let value = readline.question("enter word to search:");
- let arr=new Array(length);
+ let arr=new Array(value);
  let i=0;
  while(i!=value){
      arr[i]=readline.question();
