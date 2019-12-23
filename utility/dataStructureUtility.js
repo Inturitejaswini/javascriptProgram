@@ -8,33 +8,25 @@
 
 module.exports = {
     unorderedList(stringArray, searchWord) {
-        /*
-        * create a new object of Linkedlist class
-        */
+        //create a new object of Linkedlist class
         let list = new linkedList;
-        /*
-        *add all the array element to the linked list
-        */
+        //add all the array element to the linked list
+
         for (let i = 0; i < stringArray.length; i++) {
             list.add(stringArray[i]);
         }
-        /*
-        * This condition checks for adding the item,if item not exists in file
-        */
+    // This condition checks for adding the item,if item not exists in file
         if (list.search(searchWord) == -1) {
             list.add(searchWord);
             console.log("Added successfully..\n");
         }
-        /*
-        * This condition checks for removing the item,if item already exists in file
-        */
+        
+        //This condition checks for removing the item,if item already exists in file
         else {
             list.remove(searchWord);
             console.log("Removed successfully....\n");
         }
-        /**
-         * write operation to save updated list into the file.
-         */
+        //write operation to save updated list into the file.
         let dataWrite = list.show();
         writeToFile("./StringList.txt", dataWrite);
     }
@@ -45,27 +37,19 @@ class Node {
         this.next = null;
     }
 }
-/**
- *  creating class linkedlist which will create new nodes and perform operation like 
- *  add,remove,insertAt,insertFrom.
- */
+  //creating class linkedlist which will create new nodes and perform operation like 
+  //add,remove,insertAt,insertFrom.
 class linkedList {
     constructor() {
         this.head = null;
         this.size = 0;
     }
     add(searchWord) {
-        /**
-         * creating a new node
-         */
+          //creating a new node
         let node = new Node(searchWord);
-        /**
-         * to store current node 
-         **/
+         //to store current node 
         let current;
-        /**
-         * if list is empty add an searchWord and make it head. 
-         **/
+         //if list is empty add an searchWord and make it head. 
         if (this.head == null) {
             this.head = node;
         }
@@ -78,10 +62,7 @@ class linkedList {
         }
         this.size++;
     }
-
-    /* 
-    * remove the string or searchWord,if it already exists
-    */
+    // remove the string or searchWord,if it already exists
     remove(searchWord) {
         let current = this.head;
         let previous = null;
@@ -90,9 +71,8 @@ class linkedList {
                 if (previous == null) {         //if first element is the searchword
                     this.head = current.next;   // the saerchword will be removed and head will be the next element
                 }
-                /*it works when the search element is not at the first.
-                *so the previos node store the reference of next node.
-                */
+                //it works when the search element is not at the first.
+                //so the previos node store the reference of next node.
                 else {
                     previous.next = current.next;
                 }
@@ -105,9 +85,7 @@ class linkedList {
         }
         return -1;
     }
-    /*
-    * checks the search word already present or not
-    */
+    // checks the search word already present or not
     search(searchWord) {
         let count = 0;
         let current = this.head;
@@ -122,9 +100,7 @@ class linkedList {
     }
 
     show() {
-        /**
-         * print the given list after performing changes.
-         */
+         //print the given list after performing changes.
         let current = this.head;
         let string = "";
         while (current) {
@@ -138,10 +114,8 @@ class linkedList {
 
 function writeToFile(fileName, data) {
     let fs = require('fs');
-    /*
-    * it is used to access the file  system module
-    *fs.writefile() write the data in specified file if does not found it will create the file
-    */
+    // it is used to access the file  system module
+    //fs.writefile() write the data in specified file if does not found it will create the file
     fs.writeFile(fileName, data, function (err) {     //this function write the data in file
         if (err) {
             return console.log(err); //error 
