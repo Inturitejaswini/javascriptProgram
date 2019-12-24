@@ -6,8 +6,8 @@
 
  */
 
-module.exports = {
-    unorderedList(stringArray, searchWord) {
+exports.
+    unorderedList=(stringArray, searchWord)=> {
         //create a new object of Linkedlist class
         let list = new linkedList;
         //add all the array element to the linked list
@@ -30,7 +30,7 @@ module.exports = {
         let dataWrite = list.show();
         writeToFile("../../teju.txt", dataWrite);
     }
-}
+
 class Node {
     constructor(searchWord) {
         this.searchWord = searchWord;
@@ -127,8 +127,8 @@ function writeFile(fileName, data) {
  *  Take user input for a number, if found then pop the number out of the list else inser
  * t the number in appropriate position.
  */
-module.exports = {
-    orderedList(fileData, searchNumber) {
+exports.
+    orderedList=(fileData, searchNumber)=> {
         let  fileDataArray = fileData.toString().split(' ');
         let numbersArray = new Array();
         for (let i = 0; i < fileDataArray.length; i++) {
@@ -159,7 +159,7 @@ module.exports = {
         let  dataWrite = list.show();
         writeFile("../../number.txt", dataWrite);
     }
-}
+
 class Node {
     constructor(data) {
         this.data = data;
@@ -260,4 +260,76 @@ function writeFile(fileName, data) {
             return console.log(err); //error 
         }
     });
+}
+/**
+ * 
+ */
+exports.
+    balancedParanthesis=(expression)=>{
+         // create a new stack. 
+        let stack=new Stack();
+        let openParanthesis=0;
+        let closeParanthesis=0;
+        for(let i=0;i<expression.length;i++){
+
+            // the expressions open pranthesis will push to the stack.
+            if(expression[i]=="("){
+                stack.push(expression[i]);
+                openParanthesis++; //count the total push
+               // stack.displayStack();
+            }
+             //while closing paranthesis it will perform pop opeartion. 
+           else if(expression[i]==")"){
+                stack.pop();
+                closeParanthesis++;
+                //console.log(stack.pop());
+            }
+        }
+        if(openParanthesis==closeParanthesis){
+            console.log("Arithmetic expression is balanced");
+        }
+        else{
+            console.log("Arithmetic expression is not balanced");
+        }
+    }
+
+class Stack{
+    constructor(){
+        this.items=[]; //create new array for store expression paranthesis
+        this.top=-1;
+    }
+     // add paranthesis to the stack at last
+    push(element){
+        //this.items.push(element);
+        this.items[this.top++]=element;
+    }
+     //remove or delete paranthesis from from the first of stack.
+    pop(){
+        if(this.top==-1)
+        {
+            return -1;
+        }
+        else
+        {
+        return this.items[this.top--]; //delete the one paranthesis from stack
+        }
+    }
+    peek(){
+         //it will return top element of stack without removing it.
+        return this.items[this.top];
+    }
+    isEmpty(){
+        // checks if stack is empty are not
+       if(this.top==-1)
+        return true;
+      return false;
+    }
+    displayStack(){
+        // display stack 
+        let str="";
+        for(let i=0;i<=this.top;i++){
+            str+=this.items[i]+"";
+        }
+            console.log(str); 
+    }
 }
