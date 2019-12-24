@@ -28,7 +28,7 @@ exports.
         }
         //write operation to save updated list into the file.
         let dataWrite = list.show();
-        writeToFile("../../teju.txt", dataWrite);
+        writeFile("../../teju.txt", dataWrite);
     }
 
 class Node {
@@ -127,7 +127,8 @@ function writeFile(fileName, data) {
  *  Take user input for a number, if found then pop the number out of the list else inser
  * t the number in appropriate position.
  */
-exports.
+
+ exports.
     orderedList=(fileData, searchNumber)=> {
         let  fileDataArray = fileData.toString().split(' ');
         let numbersArray = new Array();
@@ -261,6 +262,7 @@ function writeFile(fileName, data) {
         }
     });
 }
+
 /**
  * 
  */
@@ -413,7 +415,10 @@ class Queue{
      }
 }
 /**
- * 
+ * A palindrome is a string that reads the same forward and backward, for example,
+ *  radar, toot, and madam. We would like to construct an algorithm to input a string of
+ *  characters and check whether it is a palindrome.
+ *  Take a String as an Input 
  */
 
 exports.checkPalindrom=(word)=> 
@@ -489,3 +494,36 @@ class Deque {
         }
     }
 }
+/**
+ * Take a range of 0 - 1000 Numbers and find the Prime numbers in that range. 
+ * Store the prime numbers in a 2D Array, the first dimension represents the range
+ * 0-100, 100-200, and so on. 
+ * While the second dimension represents the prime numbers in that range.
+ */
+exports.is2DPrime=(number)=> {
+    if (number== 0 || number == 1) {
+        return false;
+      }
+      for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+    let a=[[]]
+    let k = 0;
+    for (let i = 0; i < 10; i++) {
+        a[i]=[10]
+      for (let j = 0; j < 100; j++) {
+          a[i][j]=[10][100]
+        if (is2DPrime(k)) {
+          console.log("" + k);
+          k++;
+        } else {
+          k++;
+        }
+      }
+      console.log(" ");
+        }
+    
