@@ -333,3 +333,80 @@ class Stack{
             console.log(str); 
     }
 }
+/**
+ * 
+ */
+let read = require("readline-sync");
+exports.bankTransaction=(balance,num)=>{
+    try {
+        let queue=new Queue();
+        let i=0;
+        while(i<num){
+            queue.enQueue(i);
+            i++;
+        }
+        let j=0;
+        while(j!=queue.length){
+            let option=read.question("press 1 to deposit money & press 2 withdrawl money");
+            if(option==1){
+                let deposit=read.question("enter the amount to be deposit");
+                balance=(parseInt(balance)+parseInt(deposit));
+                console.log("total balance is="+balance);
+            }
+            else if(option==2)
+            {
+                let withdrawl=read.question("enter the amount to be withdrawl");
+                if(balance>withdrawl){
+                    balance=(parseInt(balance)-parseInt(withdrawl));
+                    console.log("total balance is:"+balance);
+                }
+                else{
+                    console.log("you dont have required balance in your account");
+                }
+            }
+            else{
+                console.log("invalid option !!!!!!");
+            }
+            j++;
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+class Queue{
+     // create a new constructor to create object of item.
+    constructor(){
+        this.items=[]; //declare items array
+    }    
+     // add elements into the queue using enqueue function.
+    enQueue(element){
+        return this.items.push(element); //item added to the queue array
+    }
+        deQueue(){
+        if(this.isempty()){
+            return "underflow";
+            return this.items.shift();
+        }
+        isempty()
+        {
+            if(this.items.length==0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        length()
+        {
+            return this.items.length;
+        }
+            
+     }
+     printqueue(){
+         let str="";
+         for(let i=0;i<this.items.length;i++){
+             str+=this.items[i]+" ";
+             return str;
+         }
+     }
+}
