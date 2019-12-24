@@ -412,3 +412,80 @@ class Queue{
          }
      }
 }
+/**
+ * 
+ */
+
+exports.checkPalindrom=(word)=> 
+    {
+         //create a new deque.
+        let deque = new Deque();
+        wordArray = word.toString().split(''); // to convert string to array
+        //loop iterate each character of word
+        for (let i = 0; i < wordArray.length; i++) {
+            deque.addFront(wordArray[i]); //insert the each character to deque
+        }
+        deque.display();   //display the deque elements
+        let flag=1;
+        //the while loop iterate to the size 1 
+        while(deque.size()>1)    
+        {
+            let front=deque.removeFront(); //remove one character from front
+            let rear=deque.removeRear();   //remove one character from rear
+            if(front!=rear)
+            {
+                flag=0;  //not palindrom
+            }
+        }
+        if(flag==1)
+        {
+            console.log("The word is palindrom");
+        }
+        else
+        {
+            console.log("The word is not palindrom");
+        }
+
+    }
+class Deque {
+    constructor() {
+        this.items = [];
+    }
+    addFront(element)
+    {
+        this.items.unshift(element);  //add the element at the front of queue
+    }
+    addRear(element)
+    {
+        this.items.push(element);  //add the element at the end of the deque
+    }
+    removeRear(element)
+    {
+       return this.items.pop(); //remove the last element of deque
+    }
+    removeFront(element)
+    {
+        return this.items.shift(); //remove the first element of deque
+    }
+    size()
+    {
+        return this.items.length;  //return the size of deque
+    }
+    display()
+    {
+        if(this.items.length==0)
+        {
+        console.log("Empty");
+        }
+        else
+        {
+            let string='';
+            // loop iterate upto deque size
+            for(let i=0;i<this.items.length;i++)
+            {
+                string=string+" "+this.items[i];
+            }
+            console.log("Deque elements : "+string);
+        }
+    }
+}
