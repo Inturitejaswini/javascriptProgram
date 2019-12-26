@@ -1,8 +1,8 @@
 /**
  * Read the Text from a file, split it into words and arrange it as Linked List.
- * @param:stringArray is a perameter of that list.
- * @param:searchword is to search the word in the given list.
- * finally retun the resul if searchword is found or not.
+ * @param {string}stringArray is a perameter of that list.
+ * @param {string}searchword is to search the word in the given list.
+ * @return finally retun the resul if searchword is found or not.
  * save the list into a file.
  */
 
@@ -119,9 +119,9 @@ function writeFile(fileName, data) {
 
 }
 /**
- * Read .a List of Numbers from a file and arrange it ascending Order in a Linked List.
- * Take user input for a number, if found then pop the number out of the list else inser
- * t the number in appropriate position.
+ * @param {data}filedata is file in the array.
+ * @param {number}searchNumber is to search the number in that filedata.
+ * @return finally return the result,
  */
 
  exports.
@@ -260,7 +260,8 @@ function writeFile(fileName, data) {
 }
 
 /**
- * 
+ * @param {expression}read in Arithmetic Expression.
+ * @return True or False to Show Arithmetic Expression is balanced or not.
  */
 exports.
     balancedParanthesis=(expression)=>{
@@ -333,8 +334,9 @@ class Stack{
 }
 /**
  * Create a Program which creates Banking Cash Counter where people come i
- * n to deposit Cash and withdraw Cash. Have an input panel to add people to 
- * queue to either deposit or withdraw money and dequeue the people. Maintain the Cash Balance.
+ * @param {number}balance is a perameterto check the balance.
+ * @param {number}num is to check the no of transaction.
+ * @return finally return the resul.
  */
 let read = require("readline-sync");
 exports.bankTransaction=(balance,num)=>{
@@ -411,10 +413,8 @@ class Queue{
      }
 }
 /**
- * A palindrome is a string that reads the same forward and backward, for example,
- *  radar, toot, and madam. We would like to construct an algorithm to input a string of
- *  characters and check whether it is a palindrome.
- *  Take a String as an Input 
+ *  @param {string}str is a String as an Input .
+ * @return check whether it is a palindrome.or not.
  */
 
 exports.palChecker=(str)=> {
@@ -485,10 +485,10 @@ exports.palChecker=(str)=> {
     
  /**
  * calender programme bl.
- * in which y-year is variable
- * m-month is variable
- * d-day is a variable
- * finally return the d.
+ * @param {number}y-year is variable
+ * @param {number}m-month is variable
+ * @param {number}d-day is a variable
+ * @return finally return the d.
  * takes the month and year as command-line arguments and prints theCalendar of the month.
  */
 exports.calender=()=>{
@@ -532,11 +532,11 @@ exports.calender=()=>{
      /**
       * prime anagramme programme logic.
       * 
-      * n1-variable to store the n1 value.
-      * n2-variable to store the n2 value.
+      * @param {number}n1-variable to store the n1 value.
+      * @param {number}n2-variable to store the n2 value.
       * these values are store it in to the another function.
       * Further store in a 2D Array the numbers that are Anagram and 
-      * numbers that are not Anagram.
+      * @return numbers that are not Anagram.
       */
         exports.primeAnagrams=()=>{
         let ar = new ArrayList();
@@ -599,8 +599,8 @@ exports.calender=()=>{
     primeAnagrams();
     /**
       * prime anagrammestack programme logic.
-      *  @param n1-variable to store the n1 value.
-      * @param n2-variable to store the n2 value.
+      * @param {number}n1-variable to store the n1 value.
+      * @param {number}n2-variable to store the n2 value.
       * Add the Prime Numbers that are Anagram in the Range of 0 - 1000 in
       *  a Stack using the Linked List.
       *@return Print the Anagrams in the Reverse Order. Note no Collection Library can be used.
@@ -674,11 +674,9 @@ exports.calender=()=>{
 	}
 	/**
       * prime anagrammeQueue programme logic.
-      * n1-variable to store the n1 value.
-      * n2-variable to store the n2 value.
-      * Add the Prime Numbers that are Anagram in the Range of 0 - 1000 in
-      *  a queueusing the Linked List.
-      *  Print the Anagrams in the Reverse Order. Note no Collection Library can be used.
+      * @param {number}n1-variable to store the n1 value.
+      * @param {number}n2-variable to store the n2 value.
+      *  @return Print the Anagrams in the Reverse Order.
       */
     exports.primeAnagramQueue =()=>{
        
