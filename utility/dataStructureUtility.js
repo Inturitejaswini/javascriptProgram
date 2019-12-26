@@ -648,8 +648,7 @@ exports.calender=()=>{
       *  a Stack using the Linked List.
       *  Print the Anagrams in the Reverse Order. Note no Collection Library can be used.
       */
-    class PrimeAnagramStack {
-	constructor() {
+    exports.primeAnagrameStack=()=>{
       let  obj = new StackUsingLinkedlist();
 		let b, count=0;
 		for (let i = 2; i <= 1000; i++) {
@@ -696,7 +695,7 @@ exports.calender=()=>{
 		}
 		obj.display();
 		}
-	 anagram(n1, n2) {
+	 function anagram(n1, n2) {
 		let n1count = count(n1);
 		let n2count = count(n2);
 		for (let i = 0; i < n2count.length; i++) {
@@ -706,7 +705,7 @@ exports.calender=()=>{
 		}
 		return true;
 	}
-	 count(n) {
+	 function count(n) {
 		let count = new int[10];
 		let temp = n;
 		while (temp != 0) {
@@ -717,5 +716,3 @@ exports.calender=()=>{
 		return count;
 	}
 	
-
-}
