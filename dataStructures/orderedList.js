@@ -21,8 +21,8 @@
 let fs = require("fs"); //built in library for read file
 let readline = require("readline-sync");
 let linkedList=require('../utility/dataStructureUtility'); //import the orderedlinkedlist.js fil
-let data = fs.readFileSync('../../number.txt'); //read the data from StringList.txt file
 try{
+let data = fs.readFileSync('../../number.txt'); //read the data from StringList.txt file
 console.log("Numbers data read from file: \n\n" + data);
 searchNumber = readline.question("Enter a number to search"); //user input to search element
 linkedList.orderedList(data,searchNumber); 
