@@ -8,7 +8,7 @@
 * @since : 26-12-2019
 ********************************************************************************/
 let assert=require('chai').assert
-let factorial=require('../functional/factorial.js')
+let factorial=require('../modules.js')
 describe('positive tesing of factorial',()=>{
     it('check factorial number',(done)=>{
         factorial.fact(5).then(function(result){

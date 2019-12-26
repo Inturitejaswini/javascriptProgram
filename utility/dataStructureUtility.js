@@ -1,9 +1,9 @@
 /**
- * Read the Text from a file, split it into words and arrange it as Linked List. T
- * ake a user input to search a Word in the List. If the Word is not found then add
- *  it to the list, and if it found then remove the word from the List. In the end 
+ * Read the Text from a file, split it into words and arrange it as Linked List.
+ * @param:stringArray is a perameter of that list.
+ * @param:searchword is to search the word in the given list.
+ * finally retun the resul if searchword is found or not.
  * save the list into a file.
-
  */
 
 exports.
@@ -531,6 +531,7 @@ exports.calender=()=>{
      } 
      /**
       * prime anagramme programme logic.
+      * 
       * n1-variable to store the n1 value.
       * n2-variable to store the n2 value.
       * these values are store it in to the another function.
@@ -598,11 +599,11 @@ exports.calender=()=>{
     primeAnagrams();
     /**
       * prime anagrammestack programme logic.
-      * n1-variable to store the n1 value.
-      * n2-variable to store the n2 value.
+      *  @param n1-variable to store the n1 value.
+      * @param n2-variable to store the n2 value.
       * Add the Prime Numbers that are Anagram in the Range of 0 - 1000 in
       *  a Stack using the Linked List.
-      *  Print the Anagrams in the Reverse Order. Note no Collection Library can be used.
+      *@return Print the Anagrams in the Reverse Order. Note no Collection Library can be used.
       */
     exports.primeAnagrameStack=()=>{
       let  obj = new StackUsingLinkedlist();
