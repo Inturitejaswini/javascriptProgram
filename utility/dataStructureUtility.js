@@ -579,7 +579,7 @@ exports.calender=()=>{
       * n2-variable to store the n2 value.
       * these values are store it in to the another function.
       * Further store in a 2D Array the numbers that are Anagram and 
-    *       numbers that are not Anagram.
+      * numbers that are not Anagram.
       */
         exports.primeAnagrams=()=>{
         let ar = new ArrayList();

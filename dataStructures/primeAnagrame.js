@@ -4,7 +4,7 @@
  *                      2. if nodemon installed cmd> nodemodule primeAnagrame.js
  * 
  *  Purpose         : Extend the Prime Number Program and store only the numbers in
- *                         that range that are Anagrams.
+ *                    that range that are Anagrams.
  *  @description    
  * 
  *  @file           : primeAnagrame.js
@@ -14,7 +14,7 @@
  *  @module         : primeAnagrame - This is optional if expeclictly its an npm or local package
  *  @author         : Tejaswini<chowdarytejaswini2@gmail.com>
  *  @version        : 1.0
- *  @since          : 22-12-2019
+ *  @since          : 26-12-2019
  *
  ******************************************************************************/
 let readline = require('readline-sync');
