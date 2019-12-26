@@ -10,23 +10,17 @@ exports.
     unorderedList=(stringArray, searchWord)=> {
         //create a new object of Linkedlist class
         let list = new linkedList;
-        //add all the array element to the linked list
-
-        for (let i = 0; i < stringArray.length; i++) {
+         for (let i = 0; i < stringArray.length; i++) {
             list.add(stringArray[i]);
-        }
-    // This condition checks for adding the item,if item not exists in file
+         }
         if (list.search(searchWord) == -1) {
             list.add(searchWord);
             console.log("Added successfully..\n");
         }
-        
-        //This condition checks for removing the item,if item already exists in file
         else {
             list.remove(searchWord);
             console.log("Removed successfully....\n");
         }
-        //write operation to save updated list into the file.
         let dataWrite = list.show();
         writeFile("../../teju.txt", dataWrite);
     }
@@ -121,16 +115,18 @@ function writeFile(fileName, data) {
             return console.log(err); //error 
         }
     });
+
+
 }
 /**
  * Read .a List of Numbers from a file and arrange it ascending Order in a Linked List.
- *  Take user input for a number, if found then pop the number out of the list else inser
+ * Take user input for a number, if found then pop the number out of the list else inser
  * t the number in appropriate position.
  */
 
  exports.
     orderedList=(fileData, searchNumber)=> {
-        let  fileDataArray = fileData.toString().split(' ');
+        let  fileDataArray = fileData.toString().split('');
         let numbersArray = new Array();
         for (let i = 0; i < fileDataArray.length; i++) {
             numbersArray.push(fileDataArray[i]);
