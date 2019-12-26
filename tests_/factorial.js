@@ -22,7 +22,7 @@ describe('positive tesing of factorial',()=>{
    });
     it('it should reject', (done)=>{
         factorial.fact(5).catch(function(err){
-            expect(err).to.equal("x should be greater then 00");
+            expect(err).to.equal("fact value  should be greater than 00");
         })
         .then(function(){done()})
         .catch(function(err){
