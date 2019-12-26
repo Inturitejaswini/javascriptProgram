@@ -337,8 +337,8 @@ class Stack{
 }
 /**
  * Create a Program which creates Banking Cash Counter where people come i
- * n to deposit Cash and withdraw Cash. Have an input panel to add people to Q
- * ueue to either deposit or withdraw money and dequeue the people. Maintain the Cash Balance.
+ * n to deposit Cash and withdraw Cash. Have an input panel to add people to 
+ * queue to either deposit or withdraw money and dequeue the people. Maintain the Cash Balance.
  */
 let read = require("readline-sync");
 exports.bankTransaction=(balance,num)=>{
