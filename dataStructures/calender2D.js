@@ -22,6 +22,7 @@ let month=readline.question("enter a month");
 let day=readline.question("enter a day");
 let year=readline.question("enter a year");
 calender=day(month,day,year);
+calender=isLeapYear(year);
 let result=util.calender();
 console.log(result);
 }
