@@ -216,7 +216,7 @@ exports.coupanNumber=(number)=>{
      * harmonic value n
      * print the nth haronic value
      */
-exports.har=(number)=>{
+exports.harmonic=(number)=>{
    
     let h=1;
     for(let i=2;i<=number;i++){
