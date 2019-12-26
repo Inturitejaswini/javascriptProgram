@@ -20,6 +20,7 @@ try{
 let number=readline.question("enter the value:");
 let result=util.harmonic(number);
 console.log("nth harmonic value",result);
-}catch(e){
+}
+catch(e){
     console.lo(e);
 }

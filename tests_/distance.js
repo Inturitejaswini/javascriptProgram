@@ -1,3 +1,7 @@
+
+
+
+
 let assert=require('chai').assert
 let distance=require('../functional/distance.js')
 
