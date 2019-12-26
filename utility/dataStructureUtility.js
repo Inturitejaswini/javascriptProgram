@@ -475,7 +475,7 @@ exports.palChecker=(str)=> {
         }
     }
     
-    d = new Deque();
+   let d = new Deque();
     console.log( d.isEmpty() );
     d.addRear(4);
     d.addRear('toot');
