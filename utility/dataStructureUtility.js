@@ -511,7 +511,7 @@ exports.is2DPrime=(number)=> {
       }
       return true;
     }
-    let a=[[]]
+    let a=[[]];``
     let k = 0;
     for (let i = 0; i < 10; i++) {
         a[i]=[10]
@@ -527,3 +527,49 @@ exports.is2DPrime=(number)=> {
       console.log(" ");
         }
     
+ /**
+ * calender programme bl.
+ * in which y-year is variable
+ * m-month is variable
+ * d-day is a variable
+ * finally return the d.
+ * takes the month and year as command-line arguments and prints theCalendar of the month.
+ */
+exports.calender=()=>{
+    function day(month,day,year){
+ let y = year - (14 - month) / 12;
+ let x = y + y/4 - y/100 + y/400;
+ let m = month + 12 * ((14 - month) / 12) - 2;
+ let d = (day + x + (31*m)/12) % 7;
+ return d;
+ }
+ function isLeapYear(year){
+   if(year%4==0 && year%100!=0 || year%400==0)
+   return true
+   else
+   return false
+ }
+ let month=readline.question("Enter the month")
+ let year=readline.question("Enter the year")
+
+ let months=[" ", "january", "february", "march", "april", "may", "june", "july", "august",
+               "september", "october", "november", "december"]
+ let days=[0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+ if(month==2 && isLeapYear(year))
+     days[month]=29;
+     
+     console.log( " " + months[month] + " " + year);
+     console.log("S M Tu W Th F S");
+     let x=day(month,1,year)
+
+     for(let i=0;i<x;i++){
+       console.log(" ");
+     }
+       for(let i=1;i<days[month];i++){
+         console.log('%d',i);
+         if (((i + x) % 7 == 0) || (i == days[month]))
+         console.log(" ")
+         
+       }
+     } 
