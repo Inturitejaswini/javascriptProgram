@@ -10,7 +10,7 @@
 ********************************************************************************/
 let chai=require('chai');
 let expect=chai.expect;
-let addition=require("../moduleAdditionTest.js");
+let addition=require("../modules.js");
 describe('addition', ()=>{
     it('it should add 2 nos', (done)=>{
         addition.add(1,4).then(function(result){

@@ -8,7 +8,7 @@
 * @since : 26-12-2019
 ********************************************************************************/
 let assert=require('chai').assert
-let factorial=require('../functional/distance.js')
+let distance=require('../module.js');
 describe('positive tesing of factorial',()=>{
     it('check the distance of two numbers',(done)=>{
         distance.dis(2,4).then(function(result){
