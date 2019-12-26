@@ -715,4 +715,74 @@ exports.calender=()=>{
 		}
 		return count;
 	}
-	
+	/**
+     * 
+     */
+    exports.primeAnagramQueue =()=>{
+       
+            let obj = new QueueUsingLinkedList();
+            let b,count = 0;
+            for (let i = 2; i <= 1000; i++) {
+                b = true;
+                for (let j = 2; j < i / 2; j++) {
+                    if (i % j == 0) {
+                        b = false;
+                        break;
+                    }
+                }
+                if (b)
+                    count++;
+            }
+            let a = new int[count];
+            let k = 0;
+            for (let i = 2; i <= 1000; i++) {
+                b = true;
+                for (let  j = 2; j < i / 2; j++) {
+                    if (i % j == 0) {
+                        b = false;
+                        break;
+                    }
+                }
+                if (b) {
+                    if (k < count) {
+                        a[k] = i;
+                        k++;
+                    }
+                }
+    
+            }
+            for (let l = 0; l < a.length; l++) {
+                for (let m = l + 1; m < a.length; m++) {
+                    if (anagram(a[l], a[m])) {
+                        obj.enqueue(a[l]);
+                        obj.enqueue(a[m]);
+                    }
+                }
+            }
+            for (let r = 0; r < obj.currentsize(); r++) {
+                consolele.log("%d->", obj.dequeue());
+                console.log(obj.dequeue());
+                console.log();
+            }
+        }
+        function anagram(n1, n2) {
+            let n1count = count(n1);
+            let n2count = count(n2);
+            for (let i = 0; i < n2count.length; i++) {
+                if (n1count[i] != n2count[i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function count(n) {
+            let count = new int[10];
+            let temp = n;
+            while (temp != 0) {
+                var r = temp % 10;
+                count[r]++;
+                temp = temp / 10;
+            }
+            return count;
+        }
+    
