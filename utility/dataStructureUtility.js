@@ -511,7 +511,7 @@ exports.is2DPrime=(number)=> {
       }
       return true;
     }
-    let a=[[]];``
+    let a=[[]];
     let k = 0;
     for (let i = 0; i < 10; i++) {
         a[i]=[10]
