@@ -21,6 +21,7 @@ try{
     let n1=readline.question("enter the n1 value");
     let n2=readline.question("enter the n2 value");
     primeAnagrammeStack=anagrame(n1,n2);
+    primeAnagrammeStack=count(n);
     let result=util.primeAnagrameStack();
     console.log(result);
     }
