@@ -421,7 +421,7 @@ class Queue{
  *  Take a String as an Input 
  */
 
-exports. palChecker=(str)=> {
+exports.palChecker=(str)=> {
         let  charDeque = new Deque();
     
         for (let i = 0; i < str.length; i++) {
@@ -478,8 +478,8 @@ exports. palChecker=(str)=> {
     d = new Deque();
     console.log( d.isEmpty() );
     d.addRear(4);
-    d.addRear('banana');
-    d.addFront('apple');
+    d.addRear('toot');
+    d.addFront('rear');
     d.addFront(true);
     console.log( d.size() );
     console.log( d.isEmpty() );
