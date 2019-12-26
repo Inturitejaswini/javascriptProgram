@@ -4,7 +4,7 @@
 * @Purpose : Test perform using chi and mocha in this Testing logic
 * @file    : addition.js
 * @module  : Testing 
-* @author  :Inturi tejaswini
+* @author  : Inturi tejaswini
 * @version : 1.0.0
 * @since : 26-12-2019
 ********************************************************************************/

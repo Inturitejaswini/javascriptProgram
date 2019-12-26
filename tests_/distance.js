@@ -1,27 +1,27 @@
 /*****************************************************************************
 * Execution: 1. default node cmd> node .js
 * @Purpose : Test perform using chi and mocha in this Testing logic
-* @file    : factorial.js
+* @file    : distance.js
 * @module  : Testing 
 * @author  :Inturitejaswini
 * @version : 1.0.0
 * @since : 26-12-2019
 ********************************************************************************/
 let assert=require('chai').assert
-let factorial=require('../functional/factorial.js')
+let factorial=require('../functional/distance.js')
 describe('positive tesing of factorial',()=>{
-    it('check factorial number',(done)=>{
-        factorial.fact(5).then(function(result){
-            expect(result).to.equal(120);
+    it('check the distance of two numbers',(done)=>{
+        distance.dis(2,4).then(function(result){
+            expect(result).to.equal(4.47);
             done();
         }).catch(function(err){
             done();
         })
-        assert.isNumber(factorial,'number')
+        assert.isNumber(distance,'number')
        })
    });
     it('it should reject', (done)=>{
-        factorial.fact(5).catch(function(err){
+        distance.dis(2,4).catch(function(err){
             expect(err).to.equal("x should be greater then 00");
         })
         .then(function(){done()})
