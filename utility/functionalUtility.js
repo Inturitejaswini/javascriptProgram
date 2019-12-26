@@ -224,3 +224,18 @@ exports.harmonic=(number)=>{
     }
     return h;
 }
+/**
+ * addition of two numbers
+ * here x and y are the variable.
+ * then finally return the result using promisses.
+ */
+exports.add=(x, y) =>{
+    console.log("value of x: " + x + " and value of y: " + y);
+    return new promise(function (resolve, reject) {
+        if (x < 0) {
+            reject("x should be greater then 0")
+        } else {
+            resolve(x + y)
+        }
+    })
+}
