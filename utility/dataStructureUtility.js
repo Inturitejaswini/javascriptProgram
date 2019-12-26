@@ -716,8 +716,13 @@ exports.calender=()=>{
 		return count;
 	}
 	/**
-     * 
-     */
+      * prime anagrammeQueue programme logic.
+      * n1-variable to store the n1 value.
+      * n2-variable to store the n2 value.
+      * Add the Prime Numbers that are Anagram in the Range of 0 - 1000 in
+      *  a queueusing the Linked List.
+      *  Print the Anagrams in the Reverse Order. Note no Collection Library can be used.
+      */
     exports.primeAnagramQueue =()=>{
        
             let obj = new QueueUsingLinkedList();
@@ -779,7 +784,7 @@ exports.calender=()=>{
             let count = new int[10];
             let temp = n;
             while (temp != 0) {
-                var r = temp % 10;
+                let r = temp % 10;
                 count[r]++;
                 temp = temp / 10;
             }
