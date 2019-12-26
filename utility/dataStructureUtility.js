@@ -579,7 +579,7 @@ exports.calender=()=>{
       * n2-variable to store the n2 value.
       * these values are store it in to the another function.
       * Further store in a 2D Array the numbers that are Anagram and 
-      * numbers that are not Anagram.
+    *       numbers that are not Anagram.
       */
         exports.primeAnagrams=()=>{
         let ar = new ArrayList();
@@ -640,3 +640,78 @@ exports.calender=()=>{
         return count;
     }
     primeAnagrams();
+    /**
+     * 
+     */
+    class PrimeAnagramStack {
+        constructor() {
+          let  obj = new StackUsingLinkedlist();
+            let b, count=0;
+            for (let i = 2; i <= 1000; i++) {
+                b = true;
+                for (let j = 2; j < i / 2; j++) {
+                    if (i % j == 0) {
+                        b = false;
+                        break;
+                    }
+                }
+                if (b)
+                    count++;
+            }
+            let a=new int[count];
+            let k=0;
+            for (let i = 2; i <= 1000; i++) {
+                b = true;
+                for (let j = 2; j < i / 2; j++) {
+                    if (i % j == 0) {
+                        b = false;
+                        break;
+                    }
+                }
+                if (b)
+                {
+                    if(k<count)
+                    {
+                        a[k]=i;
+                        k++;
+                    }
+                }
+                    
+            }
+            for(let l=0;l<a.length;l++)
+            {
+                for(let m=l+1;m<a.length;m++)
+                {
+                    if(anagram(a[l],a[m]))
+                    {
+                        obj.push(a[l]);
+                        obj.push(a[m]);
+                    }
+                }
+            }
+            obj.display();
+            }
+         anagram(n1, n2) {
+            let n1count = count(n1);
+            let n2count = count(n2);
+            for (let i = 0; i < n2count.length; i++) {
+                if (n1count[i] != n2count[i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+         count(n) {
+            let count = new int[10];
+            let temp = n;
+            while (temp != 0) {
+                let r = temp % 10;
+                count[r]++;
+                temp = temp / 10;
+            }
+            return count;
+        }
+        
+    
+    }
+    
