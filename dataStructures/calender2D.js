@@ -7,7 +7,7 @@
  *  @description    
  * 
  *  @file           : calender2d.js
- *  @overview       :Store the Calendar in an 2D Array, the first dimension the week of the 
+ *  @overview       : Store the Calendar in an 2D Array, the first dimension the week of the 
  *                    month and the second dimension stores the day of the week.
  *  @module         : calender2d- This is optional if expeclictly its an npm or local package
  *  @author         : Tejaswini<chowdarytejaswini2@gmail.com>

@@ -16,10 +16,10 @@
  *
  ******************************************************************************/
 let readline = require("readline-sync");
-let stack=require('../utility/dataStructureUtility');
+let util=require('../utility/dataStructureUtility');
 try {
     let expression = readline.question("Enter Expression");//import the balancedParanthesis.js file
-    stack.balancedParanthesis(expression);
+    util.balancedParanthesis(expression);
 }
 catch (error) {
     console.log(error);
