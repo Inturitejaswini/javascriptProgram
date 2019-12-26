@@ -3,7 +3,7 @@
 * @Purpose : Test perform using chi and mocha in this Testing logic
 * @file    : distance.js
 * @module  : Testing 
-* @author  :Inturi tejaswini
+* @author  :Inturitejaswini
 * @version : 1.0.0
 * @since : 26-12-2019
 ********************************************************************************/
