@@ -1,3 +1,13 @@
+
+/*****************************************************************************
+* Execution: 1. default node cmd> node .js
+* @Purpose : Test perform using chi and mocha in this Testing logic
+* @file    : addition.js
+* @module  : Testing 
+* @author  :Inturi tejaswini
+* @version : 1.0.0
+* @since : 26-12-2019
+********************************************************************************/
 let chai=require('chai');
 let expect=chai.expect;
 let addition=require("../functional/addition.js")
