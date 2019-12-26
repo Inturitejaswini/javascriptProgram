@@ -421,111 +421,71 @@ class Queue{
  *  Take a String as an Input 
  */
 
-exports.checkPalindrom=(word)=> 
-    {
-         //create a new deque.
-        let deque = new Deque();
-        wordArray = word.toString().split(''); // to convert string to array
-        //loop iterate each character of word
-        for (let i = 0; i < wordArray.length; i++) {
-            deque.addFront(wordArray[i]); //insert the each character to deque
+exports. palChecker=(str)=> {
+        let  charDeque = new Deque();
+    
+        for (let i = 0; i < str.length; i++) {
+            charDeque.addRear(str[i]);
         }
-        deque.display();   //display the deque elements
-        let flag=1;
-        //the while loop iterate to the size 1 
-        while(deque.size()>1)    
-        {
-            let front=deque.removeFront(); //remove one character from front
-            let rear=deque.removeRear();   //remove one character from rear
-            if(front!=rear)
-            {
-                flag=0;  //not palindrom
+        
+        let stillEqual = true;
+        
+        while (charDeque.size() > 1 && stillEqual) {
+           let first = charDeque.removeFront();
+           let last = charDeque.removeRear();
+            
+            if (first !== last) {
+                stillEqual = false;
             }
         }
-        if(flag==1)
-        {
-            console.log("The word is palindrom");
+        
+        return stillEqual;
+    }
+    
+    console.log( palChecker('toot') );
+    console.log( palChecker('radar') );
+       
+    class Deque {
+        constructor() {
+            this.items = [];
         }
-        else
-        {
-            console.log("The word is not palindrom");
+    
+        isEmpty() {
+            return !Boolean(this.items.length);
         }
-
-    }
-class Deque {
-    constructor() {
-        this.items = [];
-    }
-    addFront(element)
-    {
-        this.items.unshift(element);  //add the element at the front of queue
-    }
-    addRear(element)
-    {
-        this.items.push(element);  //add the element at the end of the deque
-    }
-    removeRear(element)
-    {
-       return this.items.pop(); //remove the last element of deque
-    }
-    removeFront(element)
-    {
-        return this.items.shift(); //remove the first element of deque
-    }
-    size()
-    {
-        return this.items.length;  //return the size of deque
-    }
-    display()
-    {
-        if(this.items.length==0)
-        {
-        console.log("Empty");
+    
+        addFront(item) {
+            this.items.unshift(item);
         }
-        else
-        {
-            let string='';
-            // loop iterate upto deque size
-            for(let i=0;i<this.items.length;i++)
-            {
-                string=string+" "+this.items[i];
-            }
-            console.log("Deque elements : "+string);
+    
+        addRear(item) {
+            this.items.push(item);
+        }
+    
+        removeFront() {
+            return this.items.shift();
+        }
+    
+        removeRear() {
+            return this.items.pop();
+        }
+    
+        size() {
+            return this.items.length;
         }
     }
-}
-/**
- * Take a range of 0 - 1000 Numbers and find the Prime numbers in that range. 
- * Store the prime numbers in a 2D Array, the first dimension represents the range
- * 0-100, 100-200, and so on. 
- * While the second dimension represents the prime numbers in that range.
- */
-exports.is2DPrime=(number)=> {
-    if (number== 0 || number == 1) {
-        return false;
-      }
-      for (let i = 2; i < number; i++) {
-        if (number % i == 0) {
-          return false;
-        }
-      }
-      return true;
-    }
-    let a=[[]];
-    let k = 0;
-    for (let i = 0; i < 10; i++) {
-        a[i]=[10]
-      for (let j = 0; j < 100; j++) {
-          a[i][j]=[10][100]
-        if (is2DPrime(k)) {
-          console.log("" + k);
-          k++;
-        } else {
-          k++;
-        }
-      }
-      console.log(" ");
-        }
+    
+    d = new Deque();
+    console.log( d.isEmpty() );
+    d.addRear(4);
+    d.addRear('banana');
+    d.addFront('apple');
+    d.addFront(true);
+    console.log( d.size() );
+    console.log( d.isEmpty() );
+    d.addRear(8.4);
+    console.log( d.removeRear() );
+    console.log( d.removeFront() );
     
  /**
  * calender programme bl.
