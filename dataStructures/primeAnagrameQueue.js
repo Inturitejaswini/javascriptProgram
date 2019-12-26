@@ -20,6 +20,7 @@ try{
     let n1=readline.question("enter the n1 value");
     let n2=readline.question("enter the n2 value");
     primeAnagrammeQueue=anagrame(n1,n2);
+    primeAnagrammeQueue=count(n);
     let result=util.primeAnagrameQueue();
     console.log(result);
     }
