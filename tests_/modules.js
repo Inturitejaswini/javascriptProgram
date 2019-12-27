@@ -57,3 +57,18 @@ exports.harmonic=(number) =>{
         }
     })
 }
+/**
+ * @param {number}t is a variable.
+ * @param {number}v is a variable.
+ * @return windchill value of that given two  numbers.
+ */
+exports.windChill=(t,v) =>{
+    console.log("enter the nth value");
+    return new promise(function (resolve, reject) {
+        if (t< 0||v<0) {
+            reject(" t and v values should be greater then 0")
+        } else {
+            resolve(t,v);
+        }
+    })
+}
