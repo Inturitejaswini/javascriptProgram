@@ -31,8 +31,9 @@ class Node {
         this.next = null;
     }
 }
-  //creating class linkedlist which will create new nodes and perform operation like 
-  //add,remove,insertAt,insertFrom.
+ /*creating class linkedlist which will create new nodes and perform operation like 
+  *add,remove,insertAt,insertFrom.
+  */
 class linkedList {
     constructor() {
         this.head = null;
@@ -49,7 +50,7 @@ class linkedList {
         }
         else {
             current = this.head;
-            while (current.next) {
+            while (current.next) { 
                 current = current.next;
             }
             current.next = node;
@@ -543,7 +544,6 @@ exports.calender=()=>{
         console.log();
         let b,count = 0;
         for (let i = 2; i <= 1000; i++) {
-            b = true;
             for (let j = 2; j < i / 2; j++) {
                 if (i % j == 0) {
                     b = false;

@@ -43,3 +43,17 @@ exports.fact=(number) =>{
         }
     })
 }
+/**
+ * @param {number}n is a variable.
+ * @return harmonic number of that given number.
+ */
+exports.harmonic=(number) =>{
+    console.log("enter the nth value");
+    return new promise(function (resolve, reject) {
+        if (number< 0) {
+            reject("nth harmonic  value should be greater then 0")
+        } else {
+            resolve(number);
+        }
+    })
+}
