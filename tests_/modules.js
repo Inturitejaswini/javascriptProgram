@@ -1,12 +1,8 @@
-/*****************************************************************************
-* Execution: 1. default node cmd> node .js
-* @Purpose : Test perform using chi and mocha in this Testing logic
-* @file    : addition.js
-* @module  : Testing 
-* @author  :Inturi tejaswini
-* @version : 1.0.0
-* @since : 26-12-2019
-********************************************************************************/
+/**
+ * @param {value}x is a variable.
+ * @param {value}y is a variable.
+ * @return addition of x and y value.
+ */
 exports.add=(x, y) =>{
     console.log("value of x: " + x + " and value of y: " + y);
     return new promise(function (resolve, reject) {
@@ -17,16 +13,12 @@ exports.add=(x, y) =>{
         }
     })
 }
+/**
+ * @param {value}x is a variable.
+ * @param {value}y is a variable.
+ * @return distance of x and y value.
+ */
 
-/*****************************************************************************
-* Execution: 1. default node cmd> node .js
-* @Purpose : Test perform using chi and mocha in this Testing logic
-* @file    : distance.js
-* @module  : Testing 
-* @author  :Inturi tejaswini
-* @version : 1.0.0
-* @since : 26-12-2019
-********************************************************************************/
 exports.dis=(x, y) =>{
     console.log("value of x: " + x , " and value of y: " + y);
     return new promise(function (resolve, reject) {
@@ -37,16 +29,10 @@ exports.dis=(x, y) =>{
         }
     })
 }
-/*****************************************************************************
-* Execution: 1. default node cmd> node .js
-* @Purpose : Test perform using chi and mocha in this Testing logic
-* @file    : factorial.js
-* @module  : Testing 
-* @author  :Inturi tejaswini
-* @version : 1.0.0
-* @since : 26-12-2019
-********************************************************************************/
-
+/**
+ * @param {number}n is a variable.
+ * @return factorial of that given number.
+ */
 exports.fact=(number) =>{
     console.log("value of x: " + x);
     return new promise(function (resolve, reject) {
