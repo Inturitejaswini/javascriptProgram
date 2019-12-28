@@ -1,4 +1,22 @@
-let readline=require('readline-sync');
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node inventoryManagement.js 
+ *                      2. if nodemon installed cmd> nodemodule inventoryManagement.js
+ * 
+ *  Purpose         : Create a JSON file having Inventory Details for Rice, Pulses and Wheats with 
+ *                    properties name, weight, price per kg. 
+                      Use Library : Java JSON Library, For IOS JSON Library use NSJSONSerialization
+                      for parsing the JSON.
+
+ *  @description    
+ * 
+ *  @file           : inventoryManagement.js
+ *  @overview       :Create the JSON from Inventory Object and output the JSON String.
+ *  @module         : inventoryManagement - This is optional if expeclictly its an npm or local package
+ *  @author         : Tejaswini<chowdarytejaswini2@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 26-12-2019
+ *
+ ******************************************************************************/
 let fs=require('fs');
 let data=fs.readFileSync('./inventory.json');
 let obj = JSON.parse(data);
