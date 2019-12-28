@@ -58,8 +58,8 @@ exports.harmonic=(number) =>{
     })
 }
 /**
- * @param {number}t is a variable.
- * @param {number}v is a variable.
+ * @param {value}t is a variable.
+ * @param {value}v is a variable.
  * @return windchill value of that given two  numbers.
  */
 exports.windChill=(t,v) =>{
