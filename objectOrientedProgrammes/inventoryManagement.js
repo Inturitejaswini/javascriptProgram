@@ -59,7 +59,3 @@ while(k!=arr.length){
 }
 console.log("total sum of wheat prices"+sum2);
 
-arr.push(data);
-console.log(arr);
-let value = JSON.stringify(arr);
-fs.writeFileSync('Program_OutPut', value);
