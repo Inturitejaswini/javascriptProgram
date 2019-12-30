@@ -9,10 +9,9 @@
  *  @file           :stock.js
  *  @overview       :Print the Stock Report.
  *  @module         :stock - This is optional if expeclictly its an npm or local package
- *  @author         : Tejaswini<chowdarytejaswini2@gmail.com>
- *  @version        : 1.0
- *  @since          : 28-12-2019
- *
+ *  @author         :Tejaswini<chowdarytejaswini2@gmail.com>
+ *  @version        :1.0
+ *  @since          :28-12-2019
  ******************************************************************************/
 let readline=require('readline-sync');
 let  fs = require('fs');
