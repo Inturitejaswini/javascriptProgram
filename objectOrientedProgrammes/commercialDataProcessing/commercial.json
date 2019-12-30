@@ -1,0 +1,34 @@
+{ 
+    "accountList": [
+          {
+            "accountName":"abc",
+            "shareNumber": 10,
+            "stockPrice": 110.0
+          },
+          {
+            "accountName": "def",
+            "shareNumber": 4,
+            "stockPrice": 240.0
+          },
+          {
+            "accountName":"teju",
+            "shareNumber": 50,
+            "stockPrice": 540.0
+          },
+          {
+            "accountName": "gdh",
+            "shareNumber": 2500,
+            "stockPrice": 124.0
+          },
+          {
+            "accountName": "jdhd",
+            "shareNumber": 50,
+            "stockPrice": 820.0
+          },
+          {
+            "accountName": "hdte",
+            "shareNumber": 590,
+            "stockPrice": 124.0
+          }
+    ]
+ }
