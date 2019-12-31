@@ -1,5 +1,6 @@
 /**
- * 
+ * To create a Computer Factory that can Produce PC, Laptop and Server Class 
+ *  Computers.
  */
 exports.factoryDesign=()=>{
 class Computer {
@@ -33,7 +34,8 @@ factory("pc","2 gb"," 500 gb"," i7");
 factory("laptop","4 gb","1 tb","i11");
 }
 /**
- * 
+ * In observer pattern, the object that watch on the state of another object 
+ * are called Observer and the object that is being watched is called Subject. 
  */
 exports.observerDesign=()=>{
 class Observable {
