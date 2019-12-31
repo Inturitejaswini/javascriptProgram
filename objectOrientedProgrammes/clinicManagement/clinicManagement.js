@@ -6,7 +6,7 @@
  *  @file           :commercial.js
  *  @overview       :Clinique Management Programme.
  *  @module         :commercial.js - This is optional if expeclictly its an npm or local package
- *  @author         : Tejaswini<chowdarytejaswini2@gmail.com>
+ *  @author         :Tejaswini<chowdarytejaswini2@gmail.com>
  *  @version        : 1.0
  *  @since          : 30-12-2019
  *
@@ -59,7 +59,6 @@ class Clinique{
          return nameArray;
     }
     //In this method we get Id of patient
-
     getIdFrompatient(obj)
     {
         let IdArray=[];
