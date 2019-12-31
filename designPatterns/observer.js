@@ -14,37 +14,12 @@
  *  @since          :31-12-2019
  *
  ******************************************************************************/
-class Observable {
-    constructor() 
-    {
-      this.observers = [];
-    }
-    subscribe(observer) 
-    {
-      this.observers.push(observer);
-    }
-    notifyAll()
-    {    
-      this.observers.map(observer => observer.notify())  
-    }
+
+let readline = require("readline-sync");
+let util=require('../utility/designPatternsUtility');
+try{
+    util.observerDesign();
 }
-class Observer {
-    constructor(name) {
-        this.name = name;
-    }  
-    notify() {
-        console.log(`${this.name} is notified`);
-    }
+catch(e){
+    console.log(e);
 }
-      
-let observable = new Observable();
-
-let observer1 = new Observer("First Observer");
-let observer2 = new Observer("Second Observer");
-let observer3 = new Observer("Third Observer");
-
-observable.subscribe(observer1);
-observable.subscribe(observer2);
-observable.subscribe(observer3);
-
-observable.notifyAll();
