@@ -18,8 +18,8 @@
  *
  ******************************************************************************/
 let fs=require('fs');
-let data=fs.readFileSync('./inventory.json');
-let obj = JSON.parse(data);
+let inventoryData=fs.readFileSync('./inventory.json');
+let obj = JSON.parse(inventoryData);
 let count=0;
 let count1=0;
 let count2=0;

@@ -139,7 +139,7 @@ class Clinique{
                      console.log('ur doctor details')
                      console.log(doctor[key])
                  }
-             }
+                }
          }
          else if (choice == 3) {
              console.log("specialisation of the doctors are -"+data.getSpecialisationFromDoctor(obj))

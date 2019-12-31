@@ -18,10 +18,12 @@
  *
  ******************************************************************************/
 let readline=require('readline-sync');
+let fs=require('fs');
+let stockAccountData=fs.readFileSync('./commercial.json');
 let buyData=readline.question("Enter the ShareNumber: ")
 let sellData=readline.question("Enter the shareNumber for sell");
 let total=stockAccount(buyData,sellData);
-class stockAccount{
+class StockAccount{
         stockAccount(accountName, shareNumber, stockPrice) {
             this.accountName = accountName;
             this.shareNumber = shareNumber;
@@ -33,10 +35,8 @@ class stockAccount{
         sell(sellData){
             return this.shareNumber=this.shareNumber-sellData;
         }
-    }
-let fs=require('fs');
-let data=fs.readFileSync('./commercial.json');
-let obj = JSON.parse(data);
+}
+let obj = JSON.parse(stockAccountData);
 let count=0;
 let len = obj.accountList.length;
 for(let i=0; i<len; i++){
