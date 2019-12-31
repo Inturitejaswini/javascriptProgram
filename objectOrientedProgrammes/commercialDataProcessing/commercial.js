@@ -47,4 +47,4 @@ for(let i=0; i<len; i++){
     total=count;
 }
     console.log("AccountName:"+accountName+","+"ShareNumber:"+shareNumber+","+"StockPric:"+stockPrice);
-    console.log("Total price of rice is =" + total);
+    console.log("Total price of rice is="+total);
