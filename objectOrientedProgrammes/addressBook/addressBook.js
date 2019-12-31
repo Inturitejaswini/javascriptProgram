@@ -1,3 +1,17 @@
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node addressBook.js 
+ *                      2. if nodemon installed cmd> nodemodule addressBook.js
+ * 
+ *  Purpose         : Requirements and User Interface for a Simple Address Book.
+ *  @description    
+ * 
+ *  @file           :addressBook.js
+ *  @overview       :addressBook problem.
+ *  @module         :addressBook - This is optional if expeclictly its an npm or local package
+ *  @author         :Tejaswini<chowdarytejaswini2@gmail.com>
+ *  @version        :1.0
+ *  @since          :31-12-2019
+ ******************************************************************************/
 let readline = require("readline-sync");
 let fs = require('fs');
 let addressBookContent = fs.readFileSync("./addressbook.json");
