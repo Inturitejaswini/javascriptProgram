@@ -5,10 +5,10 @@
  *  @description    
  *  @file           : singleton.js
  *  @overview       : singleton design pattern.
- *  @module         : anagrame- This is optional if expeclictly its an npm or local package
+ *  @module         : factory- This is optional if expeclictly its an npm or local package
  *  @author         : Tejaswini <chowdarytejaswini2@gmail.com>
  *  @version        : 1.0
- *  @since          : 17-12-2019
+ *  @since          : 31-12-2019
  *
  ******************************************************************************/
 let car = function(){
