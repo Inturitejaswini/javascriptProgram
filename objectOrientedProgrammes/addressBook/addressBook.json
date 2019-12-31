@@ -1,0 +1,35 @@
+{
+    "address_book":
+    [
+        {
+            "first_name":"abc",
+            "last_name":"rasi",
+            "address":"hfg 1f",
+            "state":"atp",
+            "city":"anantapur",
+            "pincode":515001,
+            "phone_number":9876543144
+        },
+        {
+
+            "first_name":"sowmya",
+            "last_name":"sri",
+            "address":"21/3 hudda sector 11",
+            "state":"atp",
+            "city":"puttaparthi",
+            "pincode":132103,
+            "phone_number":9725389330
+        },
+        {
+
+            "first_name":"madhu",
+            "last_name":"inturi",
+            "address":"22 4th cross",
+            "state":"ptp",
+            "city":"puttaparthi",
+            "pincode":124212,
+            "phone_number":9034282805
+        }
+    ]
+}
+    
