@@ -11,38 +11,11 @@
  *  @since          : 31-12-2019
  *
  ******************************************************************************/
-let car = function(){
-    let carInstance;
-    function create(){
-        let running = false;
-        function start(){
-            running = true;
-        }
-        function stop(){
-            running = false;
-        }
-        function state(){
-            return running?"running":"notRunning";
-        }
-        return{
-            start:start,
-            stop:stop,
-            state:state
-        }
-    }
-    return{
-        getInstance: function(){
-            if(!carInstance){
-                carInstance = create();
-            }
-            return carInstance;
-        }
-    }
+let readline = require("readline-sync");
+let util=require('../utility/designPatternsUtility');
+try{
+    util.singletonDesign();
 }
-
-let cars = new car()
-let car1 = cars.getInstance();
-let car2 = cars.getInstance();
-car1.start();
-car2.stop();
-console.log(car2.state());
+catch(e){
+    console.log(e);
+}

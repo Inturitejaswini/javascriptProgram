@@ -71,3 +71,86 @@ observable.subscribe(observer3);
 
 observable.notifyAll();
 }
+
+/**
+ * 
+ * 
+ * */
+exports.prototypeDesign=()=>{
+class Super{
+    constructor()
+    {
+        this.array = [];
+    }
+    loadData()
+    {
+        this.array.push("madhulika");
+        this.array.push("sai");
+        this.array.push("sweety");
+        this.array.push("chinni");
+    }
+    clone()
+    {
+        let clone = [];
+        for(let i=0;i<this.array.length;i++){
+            clone[i] = this.array[i];
+        }
+        return clone;
+    }
+}
+let  Prototype = () => {
+    let array1 = [];
+    let array2 = [];
+    let s1 = new Super();
+    s1.loadData();
+    array1 = s1.clone();
+    array2 = s1.clone();
+    array1.push("teju");
+    array1.push("sowmya");
+    array2.push("sragdha");
+    console.log(array1);
+    console.log(array2);
+}
+Prototype();
+}
+
+/**
+ * 
+ */
+exports.singletonDesign=()=>{
+let car = function(){
+    let carInstance;
+    function create(){
+        let running = false;
+        function start(){
+            running = true;
+        }
+        function stop(){
+            running = false;
+        }
+        function state(){
+            return running?"running":"notRunning";
+        }
+        return{
+            start:start,
+            stop:stop,
+            state:state
+        }
+    }
+    return{
+        getInstance: function(){
+            if(!carInstance){
+                carInstance = create();
+            }
+            return carInstance;
+        }
+    }
+}
+
+let cars = new car()
+let car1 = cars.getInstance();
+let car2 = cars.getInstance();
+car1.start();
+car2.stop();
+console.log(car2.state());
+}
