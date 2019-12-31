@@ -75,9 +75,9 @@ observable.notifyAll();
 }
 
 /**
- * 
- * 
- * */
+ * It is used when the Object creation is a costly affair requires a lot of time and 
+ * resources and you have a similar object alreadyexisting. 
+ */
 exports.prototypeDesign=()=>{
 class Super{
     constructor()
@@ -117,7 +117,7 @@ Prototype();
 }
 
 /**
- * 
+ * we have to write the code using singlton design pattern to take one small exaple.
  */
 exports.singletonDesign=()=>{
 let car = function(){
