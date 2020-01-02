@@ -13,13 +13,13 @@
  *  @since          : 2-01-2020
  *
  ******************************************************************************/
-let adder=require("./moduleTest.js");
+let adder=require("./moduleTest.js.js");
 describe("adder",()=>{
     it("should add two numbers",()=>{
         expect(adder(1,2).toBe(3));
     });
     it("should return a sole input",()=>{
-expect(adder(5)).toBe(5);
+        expect(adder(5)).toBe(5);
     });
     it("should add three number",()=>{
         expect(adder(1,2,3)).toBe(6);
