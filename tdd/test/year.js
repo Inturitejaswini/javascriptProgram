@@ -1,3 +1,17 @@
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node leapyear.js 
+ *                      2. if nodemon installed cmd> nodemon leapyear.js
+ *  Purpose         :teting the leapyear programme using tdd.
+ *  @description   
+ *  @file           : calculator.js
+ *  @overview       : check the year is leap year or not using testcases.
+ *  @module         : year - This is optional if expeclictly its an npm or local package
+ *  @author         : Tejaswini <chowdarytejaswini2@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 2-01-2020
+ *
+ ******************************************************************************/
+
 let chai = require('chai')
 let expect = chai.expect
 
