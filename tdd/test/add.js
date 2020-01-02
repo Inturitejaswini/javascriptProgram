@@ -13,21 +13,23 @@
  *  @since          : 2-01-2020
  *
  ******************************************************************************/
-let adder=require("./moduleTest.js.js");
-describe("adder",()=>{
+let chai = require('chai')
+let expect = chai.expect
+let addition = require('../src/addition')
+describe("addition",()=>{
     it("should add two numbers",()=>{
-        expect(adder(1,2).toBe(3));
+        expect(addition(1,2).toBe(3));
     });
     it("should return a sole input",()=>{
-        expect(adder(5)).toBe(5);
+        expect(addition(5)).toBe(5);
     });
     it("should add three number",()=>{
-        expect(adder(1,2,3)).toBe(6);
+        expect(addition(1,2,3)).toBe(6);
     });
     it("should return 0 if no numbers are passed",()=>{
-        expect(adder()).toBe(0);
+        expect(addition()).toBe(0);
     });
     it("should add any number of aurguments",()=>{
-     expect(adder(1,2,3,4,5,6)).toBe(21);   
+     expect(addition(1,2,3,4,5,6)).toBe(21);   
     })
 });
