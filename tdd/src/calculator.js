@@ -5,9 +5,9 @@
  * @return finally using operations test the program using tdd test.
  */
 let add = (a, b) => a + b
-const subtract = (a, b) => a - b
-const multiply = (a, b) => a * b
-const divide = (a, b) => b !== 0 ? (a / b) : undefined
+let subtract = (a, b) => a - b
+let multiply = (a, b) => a * b
+let divide = (a, b) => b !== 0 ? (a / b) : undefined
 module.exports = {
     add,
     subtract,
