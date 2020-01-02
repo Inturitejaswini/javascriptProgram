@@ -9,4 +9,9 @@ describe('harmonic', () => {
 			expect(harmonic.har(3)).to.equal(1.83333)
 		})
     })
+    describe('Harmonic', () => {
+		it('4 should be equals to 3', () => {
+			expect(harmonic.har(4)).to.equal(2.83)
+		})
+    })
 })
