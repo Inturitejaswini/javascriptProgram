@@ -1,6 +1,7 @@
 /**
  * To create a Computer Factory that can Produce PC, Laptop and Server Class 
  *  Computers.
+ * @return return the result.
  */
 exports.factoryDesign=()=>{
 class Computer {
