@@ -36,6 +36,7 @@ factory("laptop","4 gb","1 tb","i11");
 /**
  * In observer pattern, the object that watch on the state of another object 
  * are called Observer and the object that is being watched is called Subject. 
+ * @return return the result.
  */
 exports.observerDesign=()=>{
 class Observable {
