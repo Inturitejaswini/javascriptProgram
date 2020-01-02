@@ -77,6 +77,7 @@ observable.notifyAll();
 /**
  * It is used when the Object creation is a costly affair requires a lot of time and 
  * resources and you have a similar object alreadyexisting. 
+ * @return return the result.
  */
 exports.prototypeDesign=()=>{
 class Super{
@@ -118,6 +119,7 @@ Prototype();
 
 /**
  * we have to write the code using singlton design pattern to take one small exaple.
+ * @return finally return the result.
  */
 exports.singletonDesign=()=>{
 let car = function(){
