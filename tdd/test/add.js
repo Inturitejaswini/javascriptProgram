@@ -18,18 +18,18 @@ let expect = chai.expect
 let addition = require('../src/addition')
 describe("addition",()=>{
     it("should add two numbers",()=>{
-        expect(addition(1,2).toBe(3));
+        expect(addition.add(1,2).toBe(3));
     });
     it("should return a sole input",()=>{
-        expect(addition(5)).toBe(5);
+        expect(addition.add(5)).toBe(5);
     });
     it("should add three number",()=>{
-        expect(addition(1,2,3)).toBe(6);
+        expect(addition.add(1,2,3)).toBe(6);
     });
     it("should return 0 if no numbers are passed",()=>{
-        expect(addition()).toBe(0);
+        expect(addition.add()).toBe(0);
     });
     it("should add any number of aurguments",()=>{
-     expect(addition(1,2,3,4,5,6)).toBe(21);   
+     expect(addition.add(1,2,3,4,5,6)).toBe(21);   
     })
 });

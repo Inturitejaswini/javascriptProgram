@@ -13,21 +13,21 @@
  ******************************************************************************/
 let chai = require('chai')
 let expect = chai.expect
-let dist= require('../src/distance')
+let distance= require('../src/distance')
 describe("distance",()=>{
     it("should distance between two numbers",()=>{
-        expect(dist(1,2).toBe(3));
+        expect(distance.dist(1,2).toBe(2.2));
     });
     it("should return a sole input",()=>{
-        expect(dist(5)).toBe(5);
+        expect(distance.dist(5)).toBe(5);
     });
     it("should distance between three number",()=>{
-        expect(dist(1,2,3)).toBe(6);
+        expect(distance.dist(1,2,3)).toBe(6);
     });
     it("should return 0 if no numbers are passed",()=>{
-        expect(dist()).to.equal(0);
+        expect(distance.dist()).to.equal(0);
     });
     it("should distance of any number of aurguments",()=>{
-     expect(dist(1,2,3,4,5,6)).to.equal(21);   
+     expect(distance.dist(1,2,3,4,5,6)).to.equal(21);   
     })
 });
