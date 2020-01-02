@@ -1,4 +1,19 @@
-let adder=require("./adder");
+
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node adder.js 
+ *                      2. if nodemon installed cmd> nodemon adder.js
+ * 
+ *  Purpose         : adding the numbers using tdd test.
+ *  @description   
+ *  @file           : adder.js
+ *  @overview       : adding numbers.
+ *  @module         : adder - This is optional if expeclictly its an npm or local package
+ *  @author         : Tejaswini <chowdarytejaswini2@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 2-01-2020
+ *
+ ******************************************************************************/
+let adder=require("./moduleTest.js");
 describe("adder",()=>{
     it("should add two numbers",()=>{
         expect(adder(1,2).toBe(3));
