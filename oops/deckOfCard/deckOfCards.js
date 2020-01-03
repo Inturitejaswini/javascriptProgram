@@ -32,6 +32,12 @@ for(let i=0; i<n; i++){
     deck[i]=temp;
 }
 //For Printing the resultant of Deck of cards..
-for(let i= 0;i<n;i++) {
-    console.log(deck[i]);
+for(let i=0; i<4; i++){
+    console.log("Person "+(i+1));
+    let k=0;
+    let array=[];
+    for(let j=0;j<9; j++){
+        array[k++]=deck[i+j*4];
+    }
+    console.log(array);
 }
