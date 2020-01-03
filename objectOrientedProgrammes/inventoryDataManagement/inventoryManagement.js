@@ -33,6 +33,7 @@ for (let i = 0; i < len; i++) {
      let price =obj.rice[i].price;
     count=count+obj.rice[i].price;
     console.log("Name : " + name + " , " + "Weight : " + weight + " , " + "price : " + price);
+    console.log(price/weight+"perkg");
     console.log("Total price of rice is =" + count);
 }
 console.log('====================================');
@@ -44,6 +45,7 @@ for (let i= 0; i < len; i++) {
     let price = obj.pulses[i].price;
    count1=count1+obj.pulses[i].price;
     console.log("Name : " + name + " , " + "Weight : " + weight + " , " + "price : " + price);
+    console.log(price/weight+"perkg");
     console.log("Total price of  is =" + count1);
 }
 console.log('====================================');
@@ -55,5 +57,6 @@ for (let i = 0; i < len; i++) {
     let price = obj.wheat[i].price;
     count2=count2+obj.wheat[i].price;
     console.log("Name : " + name + " , " + "Weight : " + weight + " , " + "price : " + price);
+    console.log(price/weight+"perkg");
     console.log("Total price of wheat is =" + count2);
 }
