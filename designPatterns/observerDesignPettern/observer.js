@@ -15,11 +15,5 @@
  *
  ******************************************************************************/
 
-let readline = require("readline-sync");
 let util=require('../../utility/designPatternsUtility');
-try{
-    util.observerDesign();
-}
-catch(e){
-    console.log(e);
-}
+  util.observerDesign();
