@@ -21,13 +21,13 @@ console.log('====================================');
 console.log("Resultant of Stock report");
 console.log('====================================');
 let len = obj.stock.length;
-let count=0;
+let sum=0;
 for (let i = 0; i < len; i++) {
     let stockName = obj.stock[i].stockName;
     let noOfShares = obj.stock[i].noOfShares;
     let sharePrice = obj.stock[i].sharePrice;
-    count=count+obj.stock[i].sharePrice;
+    sum=sum+obj.stock[i].sharePrice;
     console.log("Name:"+stockName+","+"number:"+noOfShares+","+"price:"+sharePrice);
     console.log("Total price of shares =" + sharePrice*noOfShares);
-    console.log("print the total share count"+count);
+    console.log("print the total share count"+sum);
 }
