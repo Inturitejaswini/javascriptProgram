@@ -107,9 +107,9 @@
 
     },
     /**
-         * Traverse till i*i <= N instead of i <= N for efficiency.
-         *  Print the prime factors of number N.
-         */
+    * Traverse till i*i <= N instead of i <= N for efficiency.
+    *  Print the prime factors of number N.
+    */
     exports.factorial=(number) => {
     
         try {
