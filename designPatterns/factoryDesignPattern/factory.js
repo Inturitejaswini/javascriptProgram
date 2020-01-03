@@ -14,11 +14,5 @@
  *  @since          :31-12-2019
  *
  ******************************************************************************/
-let readline = require("readline-sync");
 let util=require('../../utility/designPatternsUtility');
-try{
-    util.factoryDesign();
-}
-catch(e){
-    console.log(e);
-}
+util.factoryDesign();
